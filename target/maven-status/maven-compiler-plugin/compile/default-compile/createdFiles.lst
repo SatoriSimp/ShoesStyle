@@ -1,0 +1,12 @@
+servlet\controllers\MainController.class
+servlet\registration\account\RegistrationInsertError.class
+servlet\registration\account\Item.class
+servlet\controllers\LoginController.class
+servlet\controllers\RegistController.class
+servlet\registration\account\Account.class
+servlet\registration\account\RegistrationDAO.class
+servlet\controllers\ErrorController.class
+servlet\registration\account\Cart.class
+servlet\registration\account\LoginInsertError.class
+servlet\controllers\DBUtils.class
+servlet\registration\account\RegistrationDTO.class

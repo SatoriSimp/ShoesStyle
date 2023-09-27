@@ -1,0 +1,85 @@
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    position: relative;
+
+}
+.menu li {
+    margin: 10px 40px; 
+    
+    font-size: 20px;   
+}
+.menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+.account { 
+    position: absolute;
+    right: 5%;
+    top: 30px;
+    
+}
+.account button { 
+    width: 170px;
+    height: 30px;
+    background: #003294;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.logo { 
+    position: absolute;
+    top: 30px;
+    width: 17px;
+    list-style: none;
+}
+
+.logo button {  
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin-left: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #003294;
+    
+}
+.slogan-background { 
+  
+}
+
+.slogan {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-image: url('../img/home.png');
+}
+.slogan p { 
+    position: absolute;
+    display: inline-block;
+    margin: 190px 90px;
+    border: 2px solid #003294;
+    background-color: white;
+    height: 200px;
+    width: 350px;
+    border-radius: 30px;
+    padding: 50px 50px;
+}
+.slogan p {
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.slogan span {
+    font-weight: bold;
+    color: #003294;
+    font-family: Arial, Helvetica, sans-serif;
+}
