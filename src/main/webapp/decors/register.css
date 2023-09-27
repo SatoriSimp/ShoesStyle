@@ -1,5 +1,4 @@
-
-body{   
+body {   
     position: relative;
     background-image: url('../img/login.png');
     background-size: cover;
@@ -7,7 +6,6 @@ body{
     /* max-height: 100%; */
     
 }
-
 .form-slogan { 
     position: absolute;
     color: #fff;
@@ -17,7 +15,6 @@ body{
     width: 350px;
     border-radius: 30px;
 }
-
 .form-slogan h2 { 
     display: inline-block;
     padding: 105px 30px 0 30px;
@@ -25,14 +22,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-
 .form-slogan p { 
     font-size: 45px;
     padding: 10px 100px 10px 20px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 50px;
 }
-
 .form-slogan span{
     color: #00d1ff;
     font-weight: bold;
@@ -46,11 +41,12 @@ body{
     height: 600px;
     border-radius: 30px;
 }
-.sign-in a {
+
+.register a {
     
     display: inline-block;
     color: black;
-    padding: 75px 0px 75px 380px;
+    padding: 75px 0px 0px 380px;
     text-decoration: none;
     font-size: 40px;
     font-weight: bold;
@@ -61,9 +57,9 @@ body{
     color: black;
     padding: 0px 48px 0px 380px;
     font-size: 25px;
+    
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .input-password p {
     display: inline-block;
     color: black;
@@ -71,23 +67,61 @@ body{
     font-size: 25px;  
     font-family: Arial, Helvetica, sans-serif;
 }
-
-.input-email input {
+.input-confirm p {
+    display: inline-block;
+    color: black;
+    padding: 0px 0px 0px 380px;
+    font-size: 25px;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+.input-phone { 
+    display: inline-block;
+    color: black;
+    padding: 0px 0px 0px 380px;
+    font-size: 25px;  
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+.input-address { 
+    display: inline-block;
+    color: black;
+    padding: 0px 0px 0px 380px;
+    font-size: 25px;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+.input input {
     height: 32px;
-    width: 370px;
-    font-size: 20px;
+    width: 280px;
     border: 2px solid black;
    
 }
-
-.input-password input { 
+.input-email input { 
+    display: inline-block;
+    position: absolute;
+    margin: 2% 0 0 11%;
+}
+.input-password input {
+    display: inline-block;
+    position: absolute;
+    margin: 2% 0 0 11%;
+}
+.input-phone input { 
+    display: inline-block;
+    position: absolute;
+    margin: -10% 0 0 39%;
+}
+.input-address input { 
+    display: inline-block;
+    position: absolute;
+    margin: -6% 0 0 23.5%;
+}
+/* .input-password input { 
     position: relative;
     height: 32px;
     width: 370px;
-    font-size: 20px;
+   
     border: 2px solid black;
-}
-
+} */
 .login { 
     display: inline-block;
     color: black;
@@ -97,10 +131,9 @@ body{
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 .login button { 
     height: 50px;
-    width: 280px;
+    width: 200px;
     background-color: #003294;
     color: #fff;
     font-size: 20px;
@@ -109,34 +142,15 @@ body{
     cursor: pointer;
 }
 
-.forgot { 
+.already { 
     display: inline-block;
 
-    padding: 10px 0px 0px 340px;
+    padding: 10px 0px 0px 51%;
 }
-
-.forgot li { 
+.already li { 
     list-style: none;
 }
-
-.forgot a {
-    text-decoration: none;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.create {
-    display: inline-block;   
-    margin: 0 0 0 161px;
- 
-    
-}
-
-.create li { 
-    list-style: none;
-}
-
-.create a { 
+.already a {
     text-decoration: none;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
