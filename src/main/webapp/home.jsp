@@ -20,17 +20,17 @@
         <button onclick="#">HAPS|SNEAKERS</button>
     </div> 
     <ul class="menu"> 
-        <li><a href="#">Design</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Guides</a></li> 
+        <li><a href="design.jsp">Design</a></li>
+        <li><a href="gallery.jsp">Gallery</a></li>
+        <li><a href="blog.jsp">Blog</a></li>
+        <li><a href="guides.jsp">Guides</a></li> 
     </ul>
     
     <div class="account">
         <% if (acc == null || acc.getStrUsername().isEmpty()) { %>
             <button onclick="window.open('login.jsp', '_self')">Log-in</button>
         <% } else { %>
-            <button onclick=""><%= acc.getStrUsername() %></button>
+            <button onclick="window.open('account.jsp', '_self')">Welcome, <%= acc.getStrUsername() %></button>
         <% } %>
     </div>
 
@@ -40,4 +40,13 @@
         </div>  
     </div>
 </body>
+
+<footer>
+    <div>
+    <p>Contact us:</p><br>
+        <button onclick="window.open('https://music.youtube.com/watch?v=YWbvEOWiR_M&list=PLPfiauNbNIWXa_CtVtVUKbaIOB9NJQkzQ')">Facebook</button>
+        <button onclick="window.open('https://music.youtube.com/watch?v=saOnB_CRG9Y&si=bJJJ1lQbF-ffNmOK')">Youtube</button>
+        <button onclick="window.open('https://music.youtube.com/watch?v=TvSYkh0-Ntg&si=rIkJanXchi4A5nhx')">Email</button>
+    </div>
+</footer>
 </html>

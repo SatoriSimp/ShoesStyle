@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import servlet.registration.account.Account;
-import servlet.registration.account.LoginInsertError;
-import servlet.registration.account.RegistrationDAO;
+import servlet.utility.LoginInsertError;
+import servlet.utility.RegistrationDAO;
 
 /**
  *

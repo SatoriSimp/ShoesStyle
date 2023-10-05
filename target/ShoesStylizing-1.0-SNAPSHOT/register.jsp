@@ -3,8 +3,8 @@
     Created on : Sep 25, 2023, 8:44:43 PM
     Author     : Admin
 --%>
+<%@page import="servlet.utility.RegistrationInsertError"%>
 <%@page import="javax.servlet.Registration"%>
-<%@page import="servlet.registration.account.RegistrationInsertError"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@
         <form name="frmRegister" action="MainController" method="post">
             <div class="form-main"> 
                 <div class="register">
-                    <a href="">Create a new account</a>    
+                    <a href="#">Create a new account</a>    
                 </div>
                 <div class="input">
                     <div class="input-email">
@@ -59,13 +59,11 @@
 
 
                 <div class="login">
-                    <button type="submit" name="btnSubmit" value="Register">CREATE ACCOUNT</button>
+                    <button type="submit" name="btnSubmit" value="Register">CREATE</button>
                 </div>
 
                 <div class="already">
-                    <ul>
-                        <li style="background: white; padding: 0.25%">Already have an account? <a href="login.jsp">Log-in</a></li>
-                    </ul>
+                    <p style="background: white; padding: 0.25%">Already have an account? <a href="login.jsp">Log in</a></p>
                 </div>
 
 

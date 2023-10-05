@@ -15,8 +15,15 @@
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
+    font-family: Tahoma;
 }
+
+.menu a:hover {
+    color: #6699ff;
+    cursor: pointer;
+}
+
 .account { 
     position: absolute;
     right: 5%;
@@ -24,14 +31,18 @@
     
 }
 .account button { 
+    height: fit-content;
+    min-width: fit-content;
     width: 170px;
-    height: 30px;
+    text-overflow: ellipsis;
     background: #003294;
     color: #fff;
-    font-size: 16px;
-    border-radius: 15px;
+    font-size: 14px;
+    padding: 3.5%;
+    border-radius: 5px;
     cursor: pointer;
     border: none;
+    white-space: nowrap;
 }
 
 .logo { 
@@ -82,4 +93,34 @@
     font-weight: bold;
     color: #003294;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    background-color: #e8e8e8;
+}
+
+footer > div {
+    padding: 2%;
+    margin: 0 auto;
+    display: block;
+    align-content: center;
+    margin-left: 50%;
+}
+
+footer button {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 89, 255);
+    color: white;
+    font-weight: bold;
+    margin-right: 10%;
+    font-size: 16px;
+    height: 30px;
+    margin: 0 0 5px 5px;
+}
+
+footer button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: rgb(0, 145, 255);
 }

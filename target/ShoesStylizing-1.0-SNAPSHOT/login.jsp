@@ -1,5 +1,5 @@
 
-<%@page import="servlet.registration.account.LoginInsertError"%>
+<%@page import="servlet.utility.LoginInsertError"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +36,7 @@
 
         <div class="forgot">
             <ul>
-                <li><a href="">Forgot your password?</a></li>
+                <li><a href="forgotPassword.jsp">Forgot your password?</a></li>
             </ul>
         </div>
 
@@ -51,7 +51,5 @@
         <h2>HAPS|SNEAKERS</h2>
         <p>CRAFTING FOOTWEAR TO YOUR <span>VERY</span> DESIRE</p>
     </div>
-
-    
 </body>
 </html>

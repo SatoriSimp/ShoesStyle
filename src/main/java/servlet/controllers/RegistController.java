@@ -4,8 +4,8 @@
  */
 package servlet.controllers;
 
-import servlet.registration.account.RegistrationDAO;
-import servlet.registration.account.RegistrationInsertError;
+import servlet.utility.RegistrationDAO;
+import servlet.utility.RegistrationInsertError;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;

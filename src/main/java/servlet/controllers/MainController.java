@@ -35,6 +35,9 @@ public class MainController extends HttpServlet {
             case "Register":
                 url = "ctlRegist";
                 break;
+            case "Recovery":
+                url = "ctlRecovery";
+                break;
         }
         RequestDispatcher rd = request.getRequestDispatcher(url);
         rd.forward(request, response);

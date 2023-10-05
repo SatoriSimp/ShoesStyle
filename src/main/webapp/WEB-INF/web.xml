@@ -8,6 +8,14 @@
         <servlet-name>RegistController</servlet-name>
         <servlet-class>servlet.controllers.RegistController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RecoverPassword</servlet-name>
+        <servlet-class>servlet.controllers.RecoverPassword</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RecoverPassword</servlet-name>
+        <url-pattern>/ctlRecovery</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
