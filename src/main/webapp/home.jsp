@@ -1,52 +1,93 @@
-<%-- 
-    Document   : home
-    Created on : Sep 25, 2023, 8:42:03 PM
-    Author     : Dell
---%>
-
 <%@page import="servlet.registration.account.Account"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-    <link rel="stylesheet" href="decors/home.css">
-</head>
-<body>
     <% Account acc = (Account) request.getAttribute("UserAccount"); %>
-    <div class="logo">
-        <button onclick="#">HAPS|SNEAKERS</button>
-    </div> 
-    <ul class="menu"> 
-        <li><a href="design.jsp">Design</a></li>
-        <li><a href="gallery.jsp">Gallery</a></li>
-        <li><a href="blog.jsp">Blog</a></li>
-        <li><a href="guides.jsp">Guides</a></li> 
-    </ul>
-    
-    <div class="account">
-        <% if (acc == null || acc.getStrUsername().isEmpty()) { %>
-            <button onclick="window.open('login.jsp', '_self')">Log-in</button>
-        <% } else { %>
-            <button onclick="window.open('account.jsp', '_self')">Welcome, <%= acc.getStrUsername() %></button>
-        <% } %>
-    </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="./assets/css/reset.css" /> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <!-- cdn -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <!-- <link rel="stylesheet" href="./assets/fonts/stylesheet.css" /> -->
+        <link rel="stylesheet" href="decors/home.css" />
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <title>Shoes Stylize</title>
+    </head>
+    <body>
+        <main>
+            <!-- Header -->
+            <div class="header">
+                <div class="content">
+                    <nav class="navbar">
+                        <!-- Logo -->
+                        <img src="./img/Logo.svg" alt="HAPS|SNEAKERS." />
 
-    <div class="slogan-background">
-        <div class="slogan-form">
-            <div class="slogan"><p>CRAFTING FOOTWEAR TO YOUR <span>VERY</span> DESIRE</p></div>
-        </div>  
-    </div>
-</body>
+                        <!-- Navigation -->
+                        <ul>
+                            <li><a href="design.jsp">Design</a></li>
+                            <li><a href="gallery.jsp">Gallery</a></li>
+                            <li><a href="blog.jsp">Blog</a></li>
+                            <li><a href="guide.jsp">Guidelines</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
 
-<footer>
-    <div>
-    <p>Contact us:</p><br>
-        <button onclick="window.open('https://music.youtube.com/watch?v=YWbvEOWiR_M&list=PLPfiauNbNIWXa_CtVtVUKbaIOB9NJQkzQ')">Facebook</button>
-        <button onclick="window.open('https://music.youtube.com/watch?v=saOnB_CRG9Y&si=bJJJ1lQbF-ffNmOK')">Youtube</button>
-        <button onclick="window.open('https://music.youtube.com/watch?v=TvSYkh0-Ntg&si=rIkJanXchi4A5nhx')">Email</button>
-    </div>
-</footer>
+                        <!-- Action -->
+                        <div class="action">
+                            <% if (acc == null) { %>
+                            <a href="login.jsp" class="btn action-btn">
+                                <i class="fas fa-user-alt fa-2xs" style="color: #ffffff;"></i>
+                                <label>Account</label>
+                            </a>
+                            <% } else { %>
+                            <a href="account.jsp" class="btn action-btn">
+                                <i class="fas fa-user-alt fa-2xs" style="color: #ffffff;"></i>
+                                <%= acc.getStrUsername() %>
+                            </a>
+                            <% } %>
+                        </div>
+                        
+                        <button class="cart"><i class="fa fa-shopping-cart"></i></button>
+                    </nav>
+
+                    <div class="hero">
+                        <div class="info">
+                            <div class="background-img">
+                                <p class="desc">
+                                    Crafting Footwear to Your
+                                    <span>Very</span> Desire
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+    <footer>
+        <div>
+        <p>Contact us via</p>
+        <button>
+            <i class="fa fa-youtube-play"></i> 
+            Facebook
+        </button>
+        <button>
+            Youtube
+        </button>
+        <button>
+            Email
+        </button>
+        </div>
+    </footer>
 </html>

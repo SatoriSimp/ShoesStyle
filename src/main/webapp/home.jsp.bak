@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="./assets/css/reset.css" /> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- cdn -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        />
+        <!-- <link rel="stylesheet" href="./assets/fonts/stylesheet.css" /> -->
+        <link rel="stylesheet" href="./css/home.css" />
+        <title>Shoes Stylize</title>
+    </head>
+    <body>
+        <main>
+            <!-- Header -->
+            <div class="header">
+                <div class="content">
+                    <nav class="navbar">
+                        <!-- Logo -->
+                        <img src="./img/Logo.svg" alt="HAPS|SNEAKERS." />
+
+                        <!-- Navigation -->
+                        <ul>
+                            <li><a href="#!">Design</a></li>
+                            <li><a href="#!">Others Design</a></li>
+                            <li><a href="#!">Blog</a></li>
+                            <li><a href="#!">Guides</a></li>
+                            <li class="sub-menu">
+                                <a href="#!">Account </a>
+                            </li>
+                        </ul>
+
+                        <!-- Action -->
+                        <div class="action">
+                            <a href="#!" class="btn action-btn">Account</a>
+                        </div>
+                    </nav>
+
+                    <div class="hero">
+                        <div class="info">
+                            <div class="background-img">
+                                <p class="desc">
+                                    Crafting Footwear to Your
+                                    <span>Very</span> Desire
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
