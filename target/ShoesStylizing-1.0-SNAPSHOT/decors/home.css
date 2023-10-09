@@ -44,11 +44,16 @@
     display: inline-block;
     min-width: 170px;
     width: fit-content;
+    max-width: 200px;
     background-color: #003294;
     color: white;
     text-align: center;
     border-radius: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
+
 
 .navbar .sub-menu {
     position: relative;

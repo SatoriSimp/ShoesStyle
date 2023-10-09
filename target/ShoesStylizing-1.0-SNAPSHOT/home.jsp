@@ -52,7 +52,7 @@
                             <% } else { %>
                             <a href="account.jsp" class="btn action-btn">
                                 <i class="fas fa-user-alt fa-2xs" style="color: #ffffff;"></i>
-                                <%= acc.getStrUsername() %>
+                                <label style="font-size: 18px;"><%= acc.getStrUsername() %></label>
                             </a>
                             <% } %>
                         </div>
