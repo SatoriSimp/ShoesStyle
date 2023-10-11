@@ -8,7 +8,9 @@ D:\javstorage\ShoesStylizing\src\main\java\servlet\controllers\LoginController.j
 D:\javstorage\ShoesStylizing\src\main\java\servlet\registration\account\Cart.java
 D:\javstorage\ShoesStylizing\src\main\java\servlet\utility\EmailUtil.java
 D:\javstorage\ShoesStylizing\src\main\java\servlet\controllers\MainController.java
+D:\javstorage\ShoesStylizing\src\main\java\servlet\registration\account\Shoes.java
 D:\javstorage\ShoesStylizing\src\main\java\servlet\utility\RegistrationInsertError.java
 D:\javstorage\ShoesStylizing\src\main\java\servlet\controllers\RegistController.java
 D:\javstorage\ShoesStylizing\src\main\java\servlet\registration\account\Account.java
 D:\javstorage\ShoesStylizing\src\main\java\servlet\controllers\DBUtils.java
+D:\javstorage\ShoesStylizing\src\main\java\servlet\controllers\AddToCart.java

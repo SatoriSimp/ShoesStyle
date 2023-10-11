@@ -15,6 +15,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import servlet.registration.account.Account;
 import servlet.utility.LoginInsertError;
 import servlet.utility.RegistrationDAO;
@@ -23,7 +24,7 @@ import servlet.utility.RegistrationDAO;
  *
  * @author Dell
  */
-@WebServlet(name = "LoginController", urlPatterns = {"/ctlLogin"})
+
 public class LoginController extends HttpServlet {
 
     /**
@@ -49,11 +50,11 @@ public class LoginController extends HttpServlet {
             if (DAO.checkLogin(username, password)) {
                 acc.setStrUsername(username);
                 acc.setStrPassword(password);
-                request.setAttribute("UserAccount", acc);
+                request.getSession().setAttribute("UserAccount", acc);
                 url = "home.jsp";
             }
             else {
-                request.setAttribute("LoginError", er);
+                request.getSession().setAttribute("LoginError", er);
                 url = "login.jsp";
             }
             

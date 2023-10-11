@@ -9,14 +9,13 @@ package servlet.registration.account;
  * @author Dell
  */
 public class Account {
-    private String strUsername, strPassword, strUserID;
-    private Cart UserCartID;
+    private String strUsername, strPassword;
+    private Cart UserCart;
 
-    public Account(String strUsername, String strPassword, String strUserID, Cart UserCartID) {
+    public Account(String strUsername, String strPassword, String strUserID, Cart UserCart) {
         this.strUsername = strUsername;
         this.strPassword = strPassword;
-        this.strUserID = strUserID;
-        this.UserCartID = UserCartID;
+        this.UserCart = UserCart;
     }
     
     public Account() {}
@@ -37,19 +36,11 @@ public class Account {
         this.strPassword = strPassword;
     }
 
-    public String getStrUserID() {
-        return strUserID;
+    public Cart getUserCart() {
+        return UserCart;
     }
 
-    public void setStrUserID(String strUserID) {
-        this.strUserID = strUserID;
-    }
-
-    public Cart getUserCartID() {
-        return UserCartID;
-    }
-
-    public void setUserCartID(Cart UserCartID) {
-        this.UserCartID = UserCartID;
+    public void setUserCart(Cart UserCart) {
+        this.UserCart = UserCart;
     }
 }

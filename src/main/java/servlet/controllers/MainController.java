@@ -28,6 +28,7 @@ public class MainController extends HttpServlet {
             throws ServletException, IOException {
         String btnGet = request.getParameter("btnSubmit");
         String url = "ctlError";
+        
         switch (btnGet) {
             case "Login":
                 url = "ctlLogin";
@@ -37,6 +38,9 @@ public class MainController extends HttpServlet {
                 break;
             case "Recovery":
                 url = "ctlRecovery";
+                break;
+            case "Design":
+                url = "ctlDesign";
                 break;
         }
         RequestDispatcher rd = request.getRequestDispatcher(url);

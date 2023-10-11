@@ -50,11 +50,9 @@ public class RecoverPassword extends HttpServlet {
                             "Dear " + account.getStrUsername()
                             + "\nWe noticed that you have requested to send your password via email.\n"
                             + "Here is your password: " + account.getStrPassword()
-                            + "\nContact us via this email if you have any further question."
-                            + "\nCSS ncct sua lai coi!");
+                            + "\nPlease contact us via this email in case you have any further question.");
                 } catch (MessagingException ex) {
                     Logger.getLogger(RecoverPassword.class.getName()).log(Level.SEVERE, null, ex);
-                    System.out.println(account.getStrUserID());
                 }
             }
             RequestDispatcher rd = request.getRequestDispatcher("forgotPassword.jsp");

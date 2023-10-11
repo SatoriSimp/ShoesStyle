@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>NewServlet</servlet-name>
-        <servlet-class>NewServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>RegistController</servlet-name>
         <servlet-class>servlet.controllers.RegistController</servlet-class>
     </servlet>
@@ -12,9 +8,33 @@
         <servlet-name>RecoverPassword</servlet-name>
         <servlet-class>servlet.controllers.RecoverPassword</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddToCart</servlet-name>
+        <servlet-class>servlet.controllers.AddToCart</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>servlet.controllers.LoginController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MainController</servlet-name>
+        <servlet-class>servlet.controllers.MainController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/ctlLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddToCart</servlet-name>
+        <url-pattern>/ctlDesign</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RecoverPassword</servlet-name>
         <url-pattern>/ctlRecovery</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistController</servlet-name>
+        <url-pattern>/ctlRegist</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -28,4 +48,13 @@
         <error-code>404</error-code>
         <location>/error.jsp</location>
     </error-page>
+    <request-character-encoding>UTF-8</request-character-encoding>
+    <filter>
+        <filter-name>setCharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
 </web-app>

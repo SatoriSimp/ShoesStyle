@@ -1,12 +1,17 @@
+<%@page import="servlet.registration.account.Cart"%>
 <%@page import="servlet.registration.account.Account"%>
 
 <!DOCTYPE html>
 <html lang="en">
-    <% Account acc = (Account) request.getAttribute("UserAccount"); %>
+    <%     
+        Account acc = (Account) session.getAttribute("UserAccount");
+        Cart cart = (Cart) session.getAttribute("UserCart");
+    %>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- <link rel="stylesheet" href="./assets/css/reset.css" /> -->
+        <script src="https://kit.fontawesome.com/8a92f73d4a.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -21,7 +26,6 @@
         />
         <!-- <link rel="stylesheet" href="./assets/fonts/stylesheet.css" /> -->
         <link rel="stylesheet" href="decors/home.css" />
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
         <title>Shoes Stylize</title>
     </head>
     <body>
@@ -56,8 +60,8 @@
                             </a>
                             <% } %>
                         </div>
-                        
-                        <button class="cart"><i class="fa fa-shopping-cart"></i></button>
+                       
+                        <button class="cart" onclick="window.open('cart.jsp', '_self')"><i class="fa fa-shopping-cart"></i></button>
                     </nav>
 
                     <div class="hero">
@@ -79,13 +83,15 @@
         <div>
         <p>Contact us via</p>
         <button>
-            <i class="fa fa-youtube-play"></i> 
+            <i class="fa fa-facebook"></i> 
             Facebook
         </button>
         <button>
+            <i class="fa fa-youtube-play"></i> 
             Youtube
         </button>
         <button>
+            <i class="fa fa-envelope"></i>
             Email
         </button>
         </div>

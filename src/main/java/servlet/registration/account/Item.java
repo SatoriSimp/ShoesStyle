@@ -8,6 +8,14 @@ package servlet.registration.account;
  *
  * @author Dell
  */
-public class Item {
-    
+abstract class Item {
+    protected String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -4,8 +4,7 @@
  */
 package servlet.registration.account;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 /**
  *
@@ -13,7 +12,7 @@ import java.util.List;
  */
 public class Cart {
     private String strCartID, strUserID;
-    private final List<Item> lstItems = new ArrayList<>();
+    private final HashMap<Shoes, Integer> lstItems = new HashMap<>();
 
     public String getStrCartID() {
         return strCartID;
@@ -29,5 +28,17 @@ public class Cart {
 
     public void setStrUserID(String strUserID) {
         this.strUserID = strUserID;
+    }
+    
+    public void addItem(Shoes i) {
+       lstItems.putIfAbsent(i, 1);
+    }
+    
+    public int getQuantity() {
+        return lstItems.size();
+    }
+    
+    public HashMap<Shoes, Integer> getItemList() {
+        return lstItems;
     }
 }

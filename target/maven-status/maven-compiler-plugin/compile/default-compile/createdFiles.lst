@@ -1,3 +1,4 @@
+servlet\controllers\AddToCart.class
 servlet\registration\account\Item.class
 servlet\utility\RegistrationInsertError.class
 servlet\controllers\RegistController.class
@@ -10,6 +11,7 @@ servlet\utility\EmailUtil.class
 servlet\utility\RegistrationDTO.class
 servlet\controllers\MainController.class
 servlet\controllers\LoginController.class
+servlet\registration\account\Shoes.class
 servlet\utility\RegistrationDAO.class
 servlet\controllers\DBUtils.class
 servlet\utility\LoginInsertError.class
