@@ -36,7 +36,10 @@ public class AddToCart extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         Account user = (Account) request.getSession().getAttribute("UserAccount");
-        if (user.getUserCart() == null) user.setUserCart(new Cart());
+        if (user.getUserCart() == null) {
+            user.setUserCart(new Cart());
+            request.getSession().setAttribute("UserCart", user.getUserCart());
+        }
         Shoes shoes = new Shoes();
         shoes.setCollar(request.getParameter("collar"));
         shoes.setEyestay(request.getParameter("eyestay"));

@@ -54,7 +54,7 @@ public class LoginController extends HttpServlet {
                 url = "home.jsp";
             }
             else {
-                request.getSession().setAttribute("LoginError", er);
+                request.setAttribute("LoginError", er);
                 url = "login.jsp";
             }
             

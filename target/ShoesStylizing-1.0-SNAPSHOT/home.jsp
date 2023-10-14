@@ -61,7 +61,20 @@
                             <% } %>
                         </div>
                        
-                        <button class="cart" onclick="window.open('cart.jsp', '_self')"><i class="fa fa-shopping-cart"></i></button>
+                        <button class="cart" onclick="window.open('cart.jsp', '_self')">
+                            <i class="fa fa-shopping-cart"></i>
+                            <div style="position: relative; font-size: 18px; 
+                                 font-weight: bolder;
+                                 color: white; background: #0066ff; 
+                                 border-radius: 5px; padding: 5%;
+                                 margin-top: 10%; margin-left: 5%">
+                                <% if (cart == null) { %> 
+                                0
+                                <% } else { %>
+                                <%= cart.getQuantity() %>
+                                <% } %>
+                            </div>
+                        </button>
                     </nav>
 
                     <div class="hero">
