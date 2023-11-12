@@ -77,28 +77,26 @@ body{
 .addButton:hover{
     background-color: rgb(2, 124, 254);
 }
-
 .searchBarContainer{
     display: flex;
     align-items: center;
 }
-
 .searchBar{
     width: 100%;
-    padding: 5% 4%;
+    padding: 5% 3%;
     border-radius: 15px;
-    font-size: 16px;
 }
-
 .searchBar::placeholder{
     text-align: left;
 }
-
 .submitButton{
     padding: 5%;
     border-radius: 15px;
     margin-left: 3.9%;
     background-color: rgb(91, 169, 252);
+}
+.submitButton:hover{
+    background-color: rgb(2, 124, 254);
 }
 
 select:disabled {
@@ -159,3 +157,51 @@ tbody > tr:nth-child(odd) {
 tbody > tr:hover {
     background-color: #dddddd;
 }
+
+#analytics{
+    background-color: rgb(243, 242, 242);
+    display: none;
+    
+}
+#cards{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.card{
+    background-color: white;
+    margin: 2%;
+    width: 80%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1% 2%;
+    border-radius: 5px;
+}
+
+#revenue{
+    border-left: solid goldenrod 5px;
+}
+
+#newUser{
+    border-left: solid blue 5px;
+}
+
+#totalOrder{
+    border-left: solid rgb(0, 199, 43) 5px;
+}
+
+#totalSold{
+    border-left: solid blueviolet 5px;
+}
+
+#chart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+}
+
+
