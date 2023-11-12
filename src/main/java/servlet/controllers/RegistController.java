@@ -4,20 +4,27 @@
  */
 package servlet.controllers;
 
-import servlet.utility.RegistrationDAO;
-import servlet.utility.RegistrationInsertError;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.naming.NamingException;
+
+import javax.mail.MessagingException;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.Servlet;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import servlet.utility.RegistrationDAO;
+import servlet.utility.RegistrationInsertError;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.naming.NamingException;
+
+import servlet.utility.EmailUtil;
 
 /**
  *
@@ -30,7 +37,7 @@ public class RegistController extends HttpServlet {
     private final String REGISTER = "register.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException, NamingException, ClassNotFoundException {
+            throws ServletException, IOException, SQLException, NamingException, ClassNotFoundException, MessagingException {
         response.setContentType("text/html;charset=UTF-8");
 
         String url = REGISTER;
@@ -45,45 +52,63 @@ public class RegistController extends HttpServlet {
 
             RegistrationInsertError err = new RegistrationInsertError();
             boolean flag = false;
-            
+
             if (!email.matches("[a-zA-Z0-9]{1,64}@[a-zA-Z]+\\.[a-zA-Z]+(\\.[a-zA-Z]+)?")) {
                 err.setEmail("Incorrect email format!");
                 flag = true;
             }
-            
+
             if (password.trim().length() < 6 || password.trim().length() > 30) {
                 err.setPasswordLengErr("Password must be around 6 - 30 characters");
                 flag = true;
             }
-            
+
             if (!confirm.trim().equals(password)) {
                 err.setConfirmNotMatch("Confirm password incorrect!");
                 flag = true;
             }
-            
+
             if (!(phone.length() >= 10 && phone.length() <= 11)) {
                 err.setPhoneLengErr("Invalid Phonenumber");
                 flag = true;
             }
-            
+
             if (address == null || address.trim().isEmpty()) {
                 flag = true;
             }
-            
+
             if (flag) {
                 request.setAttribute("INSERTERROR", err);
-            } 
-            else {
-                RegistrationDAO dao = new RegistrationDAO();
-                boolean result = dao.insertRecord(email, password, phone, address);
-                
-                if (result) {
-                    out.println("<script>alert('Account created successfullyl!\nPlease log in.');</script>");
-                    url = LOGIN;
-                }
+                RequestDispatcher rd = request.getRequestDispatcher(url);
+                rd.forward(request, response);
             }
-            RequestDispatcher rd = request.getRequestDispatcher(url);
-            rd.forward(request, response);
+            else{
+                Random random = new Random();
+                int randomNumber = random.nextInt((999999 - 100000) + 1) + 100000;
+                String values = String.valueOf(randomNumber);
+                ServletContext  context = getServletContext();
+                context.setAttribute("RanNumber", values);
+                context.setAttribute("verifyEmail", email);
+                context.setAttribute("pass", password);
+                context.setAttribute("phoneNumber", phone);
+                context.setAttribute("addr", address);
+                try {
+                    EmailUtil.sendEmail(
+                            "hapssneakers@gmail.com".trim(),
+                            "hkfw umlr kbxn cycw".trim(),
+                            email,
+                            "Verify Account",
+                            "Dear " + email
+                            + "\nWe noticed that you have requested to sent code to verify your account.\n"
+                            + "Here is your code: " + values
+                            + "\nPlease contact us via this email in case you have any further question.");
+                } catch (MessagingException ex) {
+                    Logger.getLogger(RecoverPassword.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                RequestDispatcher rd = request.getRequestDispatcher("verify.jsp");            
+                rd.forward(request, response);
+            }
+
         }
     }
 
@@ -102,6 +127,8 @@ public class RegistController extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException | NamingException | ClassNotFoundException ex) {
+            Logger.getLogger(RegistController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MessagingException ex) {
             Logger.getLogger(RegistController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -124,6 +151,8 @@ public class RegistController extends HttpServlet {
         } catch (NamingException ex) {
             Logger.getLogger(RegistController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
+            Logger.getLogger(RegistController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MessagingException ex) {
             Logger.getLogger(RegistController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }

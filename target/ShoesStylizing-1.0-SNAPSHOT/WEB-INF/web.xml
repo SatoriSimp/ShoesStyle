@@ -5,6 +5,10 @@
         <servlet-class>servlet.controllers.RegistController</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>VerifyEmailController</servlet-name>
+        <servlet-class>servlet.controllers.VerifyEmailController</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>RecoverPassword</servlet-name>
         <servlet-class>servlet.controllers.RecoverPassword</servlet-class>
     </servlet>
@@ -19,6 +23,26 @@
     <servlet>
         <servlet-name>MainController</servlet-name>
         <servlet-class>servlet.controllers.MainController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CartQuantityController</servlet-name>
+        <servlet-class>servlet.controllers.CartQuantityController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderRequestHandler</servlet-name>
+        <servlet-class>servlet.controllers.OrderRequestHandler</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateController</servlet-name>
+        <servlet-class>servlet.controllers.UpdateController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderStatusUpdate</servlet-name>
+        <servlet-class>servlet.controllers.OrderStatusUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChangePassword</servlet-name>
+        <servlet-class>servlet.controllers.ChangePassword</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
@@ -35,6 +59,30 @@
     <servlet-mapping>
         <servlet-name>RegistController</servlet-name>
         <url-pattern>/ctlRegist</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CartQuantityController</servlet-name>
+        <url-pattern>/ctlModify</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderRequestHandler</servlet-name>
+        <url-pattern>/ctlOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerifyEmailController</servlet-name>
+        <url-pattern>/ctlVerify</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateController</servlet-name>
+        <url-pattern>/ctlUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderStatusUpdate</servlet-name>
+        <url-pattern>/ctlOrderStatus</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChangePassword</servlet-name>
+        <url-pattern>/ctlChangePassword</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

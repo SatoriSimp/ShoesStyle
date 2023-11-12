@@ -14,7 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import servlet.registration.account.Account;
+import servlet.registration.objects.Account;
 import servlet.utility.EmailUtil;
 import servlet.utility.RegistrationDAO;
 
@@ -43,8 +43,8 @@ public class RecoverPassword extends HttpServlet {
             if (account != null) {
                 try {
                     EmailUtil.sendEmail(
-                            "kimnguu2743@gmail.com".trim(),
-                            "mvfb ffoh hnwf vyvv".trim(),
+                            "hapssneakers@gmail.com".trim(),
+                            "hkfw umlr kbxn cycw".trim(),
                             account.getStrUsername().trim(),
                             "Password recovery!",
                             "Dear " + account.getStrUsername()

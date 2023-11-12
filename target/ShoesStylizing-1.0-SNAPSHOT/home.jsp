@@ -1,11 +1,11 @@
-<%@page import="servlet.registration.account.Cart"%>
-<%@page import="servlet.registration.account.Account"%>
+<%@page import="servlet.registration.objects.Cart"%>
+<%@page import="servlet.registration.objects.Account"%>
 
 <!DOCTYPE html>
 <html lang="en">
     <%     
         Account acc = (Account) session.getAttribute("UserAccount");
-        Cart cart = (Cart) session.getAttribute("UserCart");
+        Cart cart = acc == null ? null : acc.getUserCart();
     %>
     <head>
         <meta charset="UTF-8" />
@@ -43,7 +43,7 @@
                             <li><a href="gallery.jsp">Gallery</a></li>
                             <li><a href="blog.jsp">Blog</a></li>
                             <li><a href="guide.jsp">Guidelines</a></li>
-                            <li><a href="#">About us</a></li>
+                            <li><a href="contact.jsp">About us</a></li>
                         </ul>
 
                         <!-- Action -->
@@ -51,12 +51,12 @@
                             <% if (acc == null) { %>
                             <a href="login.jsp" class="btn action-btn">
                                 <i class="fas fa-user-alt fa-2xs" style="color: #ffffff;"></i>
-                                <label>Account</label>
+                                <label style="font-size: 20px;">Account</label>
                             </a>
                             <% } else { %>
                             <a href="account.jsp" class="btn action-btn">
                                 <i class="fas fa-user-alt fa-2xs" style="color: #ffffff;"></i>
-                                <label style="font-size: 18px;"><%= acc.getStrUsername() %></label>
+                                <label style="font-size: 16px; margin-bottom: 20px;"><%= acc.getStrUsername() %></label>
                             </a>
                             <% } %>
                         </div>

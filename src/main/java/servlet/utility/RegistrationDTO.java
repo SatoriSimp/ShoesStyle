@@ -57,6 +57,5 @@ public class RegistrationDTO implements Serializable{
     public void setAddress(String address) {
         this.address = address;
     }
-   
     
 }

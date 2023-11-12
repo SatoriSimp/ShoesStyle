@@ -33,14 +33,39 @@ public class MainController extends HttpServlet {
             case "Login":
                 url = "ctlLogin";
                 break;
+            case "Update":
+                url = "ctlUpdate";
+                break;
             case "Register":
                 url = "ctlRegist";
+                break;
+            case "Verify":
+                url = "ctlVerify";
                 break;
             case "Recovery":
                 url = "ctlRecovery";
                 break;
+            case "ChangePassword":
+                url = "ctlChangePassword";
+                break;
             case "Design":
                 url = "ctlDesign";
+                break;
+            case "Increment": case "Decrement":
+                url = "ctlModify";
+                break;
+            case "checkout":
+                url = "checkout.jsp";
+                break;
+            case "RequestOrder":
+                url = "ctlOrder";
+                break;
+            case "OrderStatus":
+                url = "ctlOrderStatus";
+                break;
+            case "Logout":
+                request.getSession().setAttribute("UserAccount", null);
+                url = "home.jsp";
                 break;
         }
         RequestDispatcher rd = request.getRequestDispatcher(url);

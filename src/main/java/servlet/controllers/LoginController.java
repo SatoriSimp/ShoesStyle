@@ -5,18 +5,16 @@
 package servlet.controllers;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import servlet.registration.account.Account;
+import servlet.registration.objects.Account;
+import servlet.registration.objects.Cart;
 import servlet.utility.LoginInsertError;
 import servlet.utility.RegistrationDAO;
 
@@ -44,12 +42,14 @@ public class LoginController extends HttpServlet {
             
             RegistrationDAO DAO = new RegistrationDAO();
             LoginInsertError er = new LoginInsertError();
-            Account acc = new Account();
+            Account acc = DAO.checkLogin(username, password);
             
             String url;
-            if (DAO.checkLogin(username, password)) {
-                acc.setStrUsername(username);
-                acc.setStrPassword(password);
+            if (acc != null) {
+                acc.setUserCart(new Cart());
+                DAO.getCartID(acc);
+                DAO.loadUserCart(acc);
+                DAO.loadUserOrders(acc);
                 request.getSession().setAttribute("UserAccount", acc);
                 url = "home.jsp";
             }
