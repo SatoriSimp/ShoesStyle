@@ -4293,12 +4293,12 @@
                           {element: lowerEyestayColor, color: "#000000"},
                           {element: heelColor, color: "#0734bb"},
                           {element: toeBoxColor, color: "#0734bb"},
-                          {element: tipColor, color: "#0734bb"},
-                          {element: quarterColor, color: "#0734bb"},
+                          {element: tipColor, color: "#000000"},
+                          {element: quarterColor, color: "#000000"},
                           {element: swooshColor, color: "#0734bb"},
-                          {element: laceColor, color: "#0734bb"},
-                          {element: tongueColor, color: "#0734bb"},
-                          {element: tongueRimColor, color: "#0734bb"},
+                          {element: laceColor, color: "#000000"},
+                          {element: tongueColor, color: "##000000"},
+                          {element: tongueRimColor, color: "#000000"},
                           {element: tongueTagColor, color: "#0734bb"},
                           {element: outsoleColor, color: "#0734bb"}
                         ];
