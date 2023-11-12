@@ -57,6 +57,7 @@
                     ['Blazer Mid', 7]
                 ]);
 
+                //set styles for chart
                 var options = {
                     width: 450,
                     height: 400,
