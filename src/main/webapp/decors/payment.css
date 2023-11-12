@@ -1,0 +1,219 @@
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+}
+
+.navbar img:hover {
+    cursor: pointer;
+
+}
+
+.navbar ul {
+    display: flex;
+
+}
+
+.navbar li {
+
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    color: black;
+    width: 500px;
+}
+
+.navbar .selected {
+    color: #0062ff;
+    font-weight: bolder;
+    filter: drop-shadow(rgba(0, 0, 0, 0.277) -0.5rem 0.5rem 5px);
+    cursor: default;
+}
+
+.selected:hover {
+    cursor: default
+}
+
+.navbar li a:hover {
+    color: #0062ff;
+    font-weight: bolder;
+    filter: drop-shadow(rgba(0, 0, 0, 0.277) -0.5rem 0.5rem 5px);
+}
+
+.navbar .action-btn:hover {
+    cursor: pointer;
+}
+
+.navbar .action-btn:hover label {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar .action-btn {
+    display: inline-block;
+    min-width: 150px;
+    width: fit-content;
+    max-width: 150px;
+    background-color: #003294;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.navbar .sub-menu {
+    position: relative;
+}
+
+.navbar .list-menu {
+    position: absolute;
+}
+
+.cart {
+    border: none;
+    background: none;
+    position: relative;
+    left: -7vh;
+}
+
+.cart i {
+    color: #0060de;
+    font-size: 36px;
+}
+
+.cart:hover {
+    cursor: pointer;
+}
+
+.cart i:hover {
+    color: #003194;
+}
+
+.title { 
+    border-top: 2px solid  rgb(78, 78, 245); 
+}
+.title h2 {
+    text-align: center;
+
+    
+}
+
+.details { 
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 10%;
+}
+
+.details h4 { 
+   
+    background-color: rgb(78, 78, 245); 
+    padding-top: 5%;
+    height: 30px;
+    color: white;
+    text-align: center;
+}
+.details-1 h4 { 
+    width: 150px;
+}
+.title-2 { 
+    text-align: center;
+}
+
+.bank-title {
+    display: flex;
+    justify-content: space-evenly;
+
+ 
+}
+.bank-title h4:nth-child(1) { 
+    margin-left: 1%;
+}
+.bank-title h4:nth-child(2) { 
+    margin-left: 6%;
+}
+.bank-title h4:nth-child(3) { 
+    margin-right: 2.5%;
+}
+.bank-title h4:nth-child(4) { 
+    padding-right: 1%;
+}
+
+.bank-1 img { 
+    vertical-align: middle;
+    max-width: 100%;
+    width: 200px;
+}
+
+.bank-1 { 
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.content, .content-2 {
+    padding: 0 21%;
+}
+/* ===================================== footer ======================================= */
+
+footer {
+    background-color: #c9c9c9;
+    border-top: black solid 5px;
+}
+
+footer > div {
+    padding-top: 0.1%;
+    padding-bottom: 1%;
+    margin: 0 auto;
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+
+footer div p {
+    font-size: 24px;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+footer button {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 89, 255);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 30px;
+    min-width: 150px;
+    text-align: center;
+}
+
+footer button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: rgb(0, 145, 255);
+}
+
+.moc-2 { 
+    margin-top: 20%;
+    border-top: 1px solid;
+    display: block;
+}
+.moc-title { 
+    margin-top: 85%;
+   
+}

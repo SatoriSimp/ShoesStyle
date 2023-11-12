@@ -1,0 +1,76 @@
+.quarterDunkLow{
+    fill: white;
+}
+.collarDunkLow{
+    fill: white;
+}
+.heelBaseDunkLow{
+    fill: white;
+}
+.heelDunkLow{
+    fill: white;
+}
+.heelTagDunkLow{
+    fill: white;
+}
+.swooshDunkLow{
+    fill: white;
+}
+.tipDunkLow{
+    fill: white;
+}
+.eyestayDunkLow{
+    fill: white;
+}
+.sockLiningDunkLow{
+    fill: white;
+}
+.tongueDunkLow{
+    fill: white;
+}
+.tongueRimDunkLow{
+    fill: white;
+}
+.tongueTagDunkLow{
+    fill: white;
+}
+.toeBoxDunkLow{
+    fill: white;
+}
+.laceDunkLow{
+    fill: white;
+}
+.midSoleDunkLow{
+    fill: white;
+}
+.outSoleDunkLow{
+    fill: white;
+}
+
+
+#dunkLowMenu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: none;
+}
+
+#dunkLowMenu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#dunkLowMenu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#dunkLowMenu > div > span:after {
+    content: ": ";
+}
+
+#dunkLowMenu > div > span + input {
+    width: 35%;
+}

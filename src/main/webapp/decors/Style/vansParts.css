@@ -1,0 +1,61 @@
+.foxingVans{
+    fill: white;
+}
+.heelLableVans{
+    fill: white;
+}
+.foxingLineVans{
+    fill: white;
+}
+.vampVans{
+    fill: white;
+}
+.heelVans{
+    fill: white;
+}
+.quarterVans{
+    fill: white;
+}
+.innerLiningVans{
+    fill: white;
+}
+.emblemVans{
+    fill: white;
+}
+.eyestayVans{
+    fill: white;
+}
+.tongueVans{
+    fill: white;
+}
+.laceVans{
+    fill: white;
+}
+
+#vansMenu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: none;
+}
+
+#vansMenu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#vansMenu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#vansMenu > div > span:after {
+    content: ": ";
+}
+
+#vansMenu > div > span + input {
+    width: 35%;
+    /* margin-bottom: 1.5%; */
+}

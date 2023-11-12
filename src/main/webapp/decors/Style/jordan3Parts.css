@@ -1,0 +1,73 @@
+.swooshJordan3{
+    fill: white;
+}
+.sockLiningJordan3{
+    fill: white;
+}
+.collarJordan3{
+    fill: white;
+}
+.bodyJordan3{
+    fill: white;
+}
+.eyestayJordan3{
+    fill: white;
+}
+.eyeletJordan3{
+    fill: white;
+}
+.midsoleAccentJordan3{
+    fill: white;
+}
+.midsoleJordan3{
+    fill: white;
+}
+.outsoleJordan3{
+    fill: white;
+}
+.tipJordan3{
+    fill: white;
+}
+.heelJordan3{
+    fill: white;
+}
+.heelTabJordan3{
+    fill: white;
+}
+.tongueJordan3{
+    fill: white;
+}
+.tongueRimJordan3{
+    fill: white;
+}
+.laceJordan3{
+    fill: white ;
+}
+
+
+#jordan3Menu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: none;
+}
+
+#jordan3Menu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#jordan3Menu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#jordan3Menu > div > span:after {
+    content: ": ";
+}
+
+#jordan3Menu > div > span + input {
+    width: 35%;
+}

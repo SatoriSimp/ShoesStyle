@@ -1,0 +1,63 @@
+.bodyBlazerMid{
+    fill: white;
+}
+.swooshBlazerMid{
+    fill: white;
+}
+.suadeBlazerMid{
+    fill: white;
+}
+.heelBlazerMid{
+    fill: white;
+}
+.toeBoxBlazerMid{
+    fill: white;
+}
+.eyestayBlazerMid{
+    fill: white;
+}
+.sockLiningBlazerMid{
+    fill: white;
+}
+.tongueBlazerMid{
+    fill: white;
+}
+.tongueTagBlazerMid{
+    fill: white;
+}
+.tongueRimBlazerMid{
+    fill: white;
+}
+.laceBlazerMid{
+    fill: white;
+}
+.midSoleBlazerMid{
+    fill: white;
+}
+
+#blazerMidMenu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: none;
+}
+
+#blazerMidMenu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#blazerMidMenu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#blazerMidMenu > div > span:after {
+    content: ": ";
+}
+
+#blazerMidMenu > div > span + input {
+    width: 35%;
+}

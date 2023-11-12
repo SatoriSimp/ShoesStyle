@@ -1,0 +1,73 @@
+.midSoleAF1{
+    fill: white;
+}
+.textAF1{
+    fill: white;
+}
+.outSoleAF1{
+    fill: white;
+}
+.tipAF1{
+    fill: white;
+}
+.toeBoxAF1{
+    fill: white;
+}
+.backAF1{
+    fill: white;
+}
+.quarterAF1{
+    fill: white;
+}
+.heelAF1{
+    fill: white;
+}
+.swooshAF1{
+    fill: white;
+}
+.sockLiningAF1{
+    fill: white;
+}
+.tongueRimAF1{
+    fill: white;
+}
+.tongueAF1{
+    fill: white;
+}
+.tongueTagAF1{
+    fill: white;
+}
+.eyestayAF1{
+    fill: white;
+}
+.laceAF1{
+    fill: white;
+}
+
+#AF1Menu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: none;
+}
+
+#AF1Menu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#AF1Menu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#AF1Menu > div > span:after {
+    content: ": ";
+}
+
+#AF1Menu > div > span + input {
+    width: 35%;
+    margin-bottom: 1.5%;
+}

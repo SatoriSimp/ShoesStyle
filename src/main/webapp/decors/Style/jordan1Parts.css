@@ -1,0 +1,91 @@
+.midSole{
+    fill: white;
+}
+
+.sockLining{
+    fill: white;
+}
+
+.collar{
+    fill: white;
+}
+
+.upperEyestay{
+    fill: white;
+}
+
+.eyestay{
+    fill: white;
+}
+
+.lowerEyestay{
+    fill: white;
+}
+
+.heel{
+    fill: white;
+}
+
+.toeBox{
+    fill: white;
+}
+
+.tip{
+    fill: white;
+}
+
+.quarter{
+    fill: white;
+}
+
+.swoosh{
+    fill: white;
+}
+
+.lace{
+    fill: white;
+}
+
+.tongue{
+    fill: white;
+}
+
+.tongueRim{
+    fill: white;
+}
+
+.tongueTag{
+    fill: white;
+}
+
+.outSole{
+    fill: white;
+}
+
+#jordan1Menu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: block;
+}
+
+#jordan1Menu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#jordan1Menu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#jordan1Menu > div > span:after {
+    content: ": ";
+}
+
+#jordan1Menu > div > span + input {
+    width: 35%;
+}
+

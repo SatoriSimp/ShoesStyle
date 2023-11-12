@@ -1,0 +1,81 @@
+.collarAirMax90{
+    fill: white;
+}
+.toeBoxAirMax90{
+    fill: white;
+}
+.bodyOverlayAirMax90{
+    fill: white;
+}
+.swooshAirMax90{
+    fill: white;
+}
+.bodySideAirMax90{
+    fill: white;
+}
+.sockLiningAirMax90{
+    fill: white;
+}
+.eyestayAirMax90{
+    fill: white;
+}
+.upperEyestayAirMax90{
+    fill: white;
+}
+.lowerEyestayAirMax90{
+    fill: white;
+}
+.heelAirMax90{
+    fill: white;
+}
+.sideAccentAirMax90{
+    fill: white;
+}
+.tongueAirMax90{
+    fill: white;
+}
+.tongueRimAirMax90{
+    fill: white;
+}
+.tongueTagAirMax90{
+    fill: white;
+}
+.midSoleAirMax90{
+    fill: white;
+}
+.midSoleAccentAirMax90{
+    fill: white;
+}
+.outSoleAirMax90{
+    fill: white;
+}
+.laceAirMax90{
+    fill: white;
+}
+
+#airMax90Menu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: none;
+}
+
+#airMax90Menu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#airMax90Menu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#airMax90Menu > div > span:after {
+    content: ": ";
+}
+
+#airMax90Menu > div > span + input {
+    width: 35%;
+}

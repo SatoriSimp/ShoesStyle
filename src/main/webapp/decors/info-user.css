@@ -1,0 +1,117 @@
+html {
+    font-family: Tahoma;
+}
+
+.info-personal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12%;
+   
+}
+.info-personal a { 
+    padding: 20px;
+    text-decoration: none;
+    margin-left: 18%;
+    color: #5992ee;
+    width: 150px;
+}
+
+.info-personal a:hover {
+    text-decoration: underline;
+}
+
+.info-personal a:last-child {
+    color: red;
+    font-weight: bold;
+}
+
+.menu { 
+    display: flex;
+    justify-content: space-around;
+}
+.form-main {
+    margin-right: 35%;
+    margin-bottom: 15%;
+}
+.title { 
+    display: block;
+    border-bottom: 1px solid  rgb(231, 223, 223);
+    width: 200%;
+    
+}
+.title h3 {
+    font-size: 30px;
+
+}
+.text {
+  width: 120%;
+  display: table;
+}
+.details {
+    display: table-row;
+
+}
+.details label {
+    display: table-cell;
+    padding-bottom: 10%;
+    
+}
+.details input {
+    display: table-cell;
+ 
+}
+.text input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 150%;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 1%;
+    border-radius: 5px;
+    border: 1px solid rgb(129, 129, 129);
+}
+.text p {
+    padding-bottom: 2%;
+    text-align: left;
+}
+
+.btn {
+    display: flex;
+}
+
+.bnt-save { 
+    margin-left: 80%;
+}
+
+.bnt-save button { 
+    width: fit-content;
+    height: 30px;
+    white-space: nowrap;
+    background-color: #0062ff;
+    color: white;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-cancel button { 
+    width: 50px;
+    height: 30px;
+    color: white;
+    background-color: red;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ===================================== footer ======================================= */
+.moc-2 { 
+    margin-top: 20%;
+    border-top: 1px solid;
+    display: block;
+}
+.moc-title { 
+    margin-top: 85%;
+   
+}

@@ -1,0 +1,78 @@
+.lowerBodyJordan4{
+    fill: white;
+}
+.upperBodyJordan4{
+    fill: white;
+}
+.pullTabJordan4{
+    fill: white;
+}
+.tipJordan4{
+    fill: white;
+}
+.wingJordan4{
+    fill: white;
+}
+.meshJordan4{
+    fill: white;
+}
+.eyeletJordan4{
+    fill: white;
+}
+.sockLiningJordan4{
+    fill: white;
+}
+.tongueJordan4{
+    fill: white;
+}
+.tongueTagJordan4{
+    fill: white;
+}
+.tongueRimJordan4{
+    fill: white;
+}
+.innerMeshJordan4{
+    fill: white;
+}
+.laceJordan4{
+    fill: white;
+}
+.midSoleJordan4{
+    fill: white;
+}
+.midSoleAccent1Jordan4{
+    fill: white;
+}
+.midSoleAccent2Jordan4{
+    fill: white;
+}
+.outSoleJordan4{
+    fill: white;
+}
+
+#jordan4Menu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: none;
+}
+
+#jordan4Menu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#jordan4Menu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#jordan4Menu > div > span:after {
+    content: ": ";
+}
+
+#jordan4Menu > div > span + input {
+    width: 35%;
+}

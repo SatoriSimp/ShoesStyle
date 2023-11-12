@@ -1,0 +1,63 @@
+.bodyAirmax1{
+    fill: white;
+}
+.bodyLayerAirmax1{
+    fill: white;
+}
+.bodyWrapAroundAirmax1{
+    fill: white;
+}
+.swooshAirmax1{
+    fill: white;
+}
+.sockLiningAirmax1{
+    fill: white;
+}
+.eyeletAirmax1{
+    fill: white;
+}
+.tongueAirmax1{
+    fill: white;
+}
+.tongueRimAirmax1{
+    fill: white;
+}
+.tongueTagAirmax1{
+    fill: white;
+}
+.laceAirmax1{
+    fill: white;
+}
+.midSoleAirmax1{
+    fill: white;
+}
+.outSoleAirmax1{
+    fill: white;
+}
+
+#airmax1Menu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: none;
+}
+
+#airmax1Menu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#airmax1Menu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#airmax1Menu > div > span:after {
+    content: ": ";
+}
+
+#airmax1Menu > div > span + input {
+    width: 35%;
+}

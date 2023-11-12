@@ -1,0 +1,303 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+}
+
+.navbar img:hover {
+    cursor: pointer;
+
+}
+
+.navbar ul {
+    display: flex;
+
+}
+
+.navbar li {
+
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    color: black;
+    width: 500px;
+}
+
+.navbar .selected {
+    color: #0062ff;
+    font-weight: bolder;
+    filter: drop-shadow(rgba(0, 0, 0, 0.277) -0.5rem 0.5rem 5px);
+    cursor: default;
+}
+
+.selected:hover {
+    cursor: default
+}
+
+.navbar li a:hover {
+    color: #0062ff;
+    font-weight: bolder;
+    filter: drop-shadow(rgba(0, 0, 0, 0.277) -0.5rem 0.5rem 5px);
+}
+
+.navbar .action-btn:hover {
+    cursor: pointer;
+}
+
+.navbar .action-btn:hover label {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar .action-btn {
+    display: inline-block;
+    min-width: 150px;
+    width: fit-content;
+    max-width: 150px;
+    background-color: #003294;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.navbar .sub-menu {
+    position: relative;
+}
+
+.navbar .list-menu {
+    position: absolute;
+}
+
+.cart {
+    border: none;
+    background: none;
+    position: relative;
+    left: -7vh;
+}
+
+.cart i {
+    color: #0060de;
+    font-size: 36px;
+}
+
+.cart:hover {
+    cursor: pointer;
+}
+
+.cart i:hover {
+    color: #003194;
+}
+
+.hero {
+    background-image: url('../img/BackGround.svg');
+    height: 75vh;
+    background-size: cover;
+    position: relative;
+}
+
+.background-img {
+    position: absolute;
+    background-color: white;
+    width: 498px;
+    height: 319px;
+    margin: 10% 0% 0% 5%;
+    border-radius: 30px;
+    border: 2px solid black;
+
+}
+
+.desc {
+    color: black;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 45px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 60px 33px;
+}
+
+.desc span {
+    color: #003294;
+}
+
+footer {
+    background-color: #c9c9c9;
+    border-top: black solid 5px;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    color: black;
+    width: 500px;
+}
+
+.designBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(232, 250, 255);
+    border-top: black solid 5px;
+    padding: 15px;
+    height: max-content;
+    padding: 2%;
+    padding-bottom: 0%;
+}
+
+input[type="color"] {
+	opacity: 0;
+	display: block;
+	border: none;
+    width: 100%;
+}
+.color_wrapper {
+	float: left;
+    background-color: white;
+    width: 35%;
+    margin-bottom: 1.5%;
+    border-radius: 15px;
+    border: solid black 2px;
+}
+
+.color_wrapper:hover{
+    border-radius: 0px;
+}
+
+form {
+    background-color: rgb(232, 250, 255);
+    padding-bottom: 1.5%;
+}
+
+form button {
+    margin-top: -3.5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(0, 51, 255);
+    font-size: 24px;
+    border: white solid 2px;
+    border-radius: 10px;
+    color: white;
+    padding: 0.75% 1.5% 0.75% 1.5%;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+form button:hover {
+    cursor: pointer;
+    background: rgb(242, 255, 140);
+    border-color: black;
+    color: black;
+}
+
+div>h1 {
+    flex-direction: column;
+    display: block;
+}
+
+
+
+.svgContainer {
+    width: 50%;
+}
+
+#shoesSelect {
+    display: flex;
+    justify-content: center;
+    padding: 1.5%;
+}
+
+#shoesChanger {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#shoesChanger>span {
+    font-family: Tahoma;
+    text-align: left;
+    font-size: 200%;
+}
+
+#shoesChanger>span:after {
+    content: ": ";
+}
+
+#shoesChanger select {
+    background-color: rgb(198, 242, 255);
+    color: rgb(0, 0, 0);
+    padding: 8px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    appearance: button;
+    outline: none;
+    border-radius: 10px;
+    border: black solid 3px;
+    
+}
+
+
+
+#shoesChanger>select:hover {
+    color: rgba(0, 0, 0);
+    background-color: rgb(148, 230, 255);
+}
+
+#shoesChanger select option {
+    padding: 30px;
+}
+
+
+
+
+
+footer>div {
+    padding-top: 0.1%;
+    padding-bottom: 1%;
+    margin: 0 auto;
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+
+footer div p {
+    font-size: 24px;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+footer button {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 89, 255);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 30px;
+    min-width: 150px;
+    text-align: center;
+}
+
+footer button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: rgb(0, 145, 255);
+}

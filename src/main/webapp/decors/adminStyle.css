@@ -1,0 +1,161 @@
+body{
+    padding: 5%;
+    background-color: rgb(215, 237, 255);
+    color: rgb(34, 52, 142);
+    font-family: tahoma;
+}
+#wrapper{
+    background-color: white;
+    box-shadow: 5px 5px 5px grey;
+    padding: 2%;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu{
+    border: solid rgb(169, 169, 169);
+    width: 20%;
+    padding: 1%;
+    margin-right: 0.5%;
+}
+#menu button{
+    background-color: transparent;
+    padding: 5%;
+    border: none;
+    border-radius: 15px;
+    font-size: large;
+}
+#menu #userManagement{
+    background-color:  rgba(103, 215, 249, 0.5);
+} 
+
+.content{
+    box-shadow: 2px 2px 15px 0px grey;
+    border-radius: 5px;
+    width: 85%;
+    max-width: 85%;
+    overflow-x: scroll;
+    float: right;
+    /* background-color: rgb(198, 242, 255); */
+    padding: 1%;
+    margin-left: 0.5%;
+}
+
+#user {
+    display: none;
+}
+
+#order {
+    display: none;
+}
+
+#product {
+    display: none;
+}
+
+#mainContent{
+    display: flex;
+}
+
+.contentChild{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 2%;
+    position: relative;
+}
+
+.addButton{
+    padding: 1% 5%;
+    border-radius: 15px;
+    color: white;
+    background-color: rgb(91, 169, 252);
+}
+.addButton:hover{
+    background-color: rgb(2, 124, 254);
+}
+
+.searchBarContainer{
+    display: flex;
+    align-items: center;
+}
+
+.searchBar{
+    width: 100%;
+    padding: 5% 4%;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+.searchBar::placeholder{
+    text-align: left;
+}
+
+.submitButton{
+    padding: 5%;
+    border-radius: 15px;
+    margin-left: 3.9%;
+    background-color: rgb(91, 169, 252);
+}
+
+select:disabled {
+    background-color: gray;
+}
+
+select {
+    border: black solid 1px;
+    padding: 2% 0;
+    background: #0066ff;
+    color: white;
+    font-size: 16px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    overflow: scroll;
+    max-width: 100%;
+}
+
+th {
+    padding: 15px;
+    background: white;
+    color: #0099ff;
+}
+
+td {
+    padding: 20px;
+}
+
+td > button {
+    border: none;
+    background: none;
+}
+
+a #save {
+    border: black solid 2px;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+tr, th {
+    border-bottom: black dashed 2px;
+}
+
+tbody > tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+tbody > tr:hover {
+    background-color: #dddddd;
+}

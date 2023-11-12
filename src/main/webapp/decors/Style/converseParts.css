@@ -1,0 +1,57 @@
+.bodyConverse{
+    fill: white;
+}
+.logoConverse{
+    fill: white;
+}
+.starTextConverse{
+    fill: white;
+}
+.heelPatchConverse{
+    fill: white;
+}
+.midSoleConverse{
+    fill: white;
+}
+.midSoleLineConverse{
+    fill: white;
+}
+.toeCapConverse{
+    fill: white;
+}
+.eyeHolesConverse{
+    fill: white;
+}
+.tongueConverse{
+    fill: white;
+}
+.laceConverse{
+    fill: white;
+}
+
+#converseMenu {
+    background-color: rgb(198, 242, 255);
+    padding: 2%;
+    border-radius: 10px;
+    border: black solid 3px;
+    width: 25%;
+    display: none;
+}
+
+#converseMenu > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#converseMenu > div > span {
+    font-family: Tahoma;
+    text-align: left;
+}
+
+#converseMenu > div > span:after {
+    content: ": ";
+}
+
+#converseMenu > div > span + input {
+    width: 35%;
+}

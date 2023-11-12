@@ -1,0 +1,187 @@
+.navbar { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+}
+
+.navbar ul { 
+    display: flex;
+
+}
+
+.navbar li { 
+    
+    list-style: none;
+}
+.navbar a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: Inter; 
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    color: black;
+    width: 500px;
+}
+
+.navbar li a:hover {
+    color: #0062ff;
+    font-weight: bolder;
+    filter: drop-shadow(rgba(0, 0, 0, 0.277) -0.5rem 0.5rem 5px);
+}
+
+.navbar .action-btn:hover {
+    cursor: pointer;
+}
+
+.navbar .action-btn:hover label {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar .action-btn { 
+    display: inline-block;
+    min-width: 150px;
+    width: fit-content;
+    max-width: 150px;
+    background-color: #003294;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.navbar .sub-menu {
+    position: relative;
+}
+
+.navbar .list-menu { 
+    position: absolute;
+}
+
+.navbar .selected {
+    color: #0062ff;
+    font-weight: bolder;
+    filter: drop-shadow(rgba(0, 0, 0, 0.277) -0.5rem 0.5rem 5px);
+    cursor: default;
+}
+
+.cart {
+    border: none;
+    background: none;
+    position: relative;
+    left: -7vh;
+}
+
+.cart i {
+    color: #0060de; 
+    font-size: 36px;
+}
+
+.cart:hover {
+    cursor: pointer;
+}
+
+.cart i:hover {
+    color: #003194; 
+}
+
+#itemList{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    width: 85%;
+    padding: 3%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.itemCard {
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    font-family: Inter; 
+    margin: 2%;
+    padding-top: 2%;
+}
+
+.itemCard:hover {
+    background: #ededed;
+    box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.4);
+}
+  
+.itemCard svg {
+    width: 75%;
+    height: 50%;
+    min-height: 200px;
+}
+
+.itemCard p:nth-child(5) {
+    padding: 0 2%;
+    font-style: italic;
+}
+
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .itemCard button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #003294;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .itemCards button:hover {
+    opacity: 0.7
+  }
+
+
+footer {
+    background-color: #c9c9c9;
+    border-top: black solid 5px;
+}
+
+footer > div {
+    padding-top: 0.1%;
+    padding-bottom: 1%;
+    margin: 0 auto;
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+
+footer div p {
+    font-size: 24px;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+footer button {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 89, 255);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 30px;
+    min-width: 150px;
+    text-align: center;
+}
+
+footer button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: rgb(0, 145, 255);
+}
