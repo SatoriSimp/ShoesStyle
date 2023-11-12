@@ -1152,12 +1152,12 @@
             s.setUpperEyestay("#0734bb");
             s.setHeel("#0734bb");
             s.setToeBox("#0734bb");            
-            s.setTip("#0734bb");
-            s.setQuarter("#0734bb");
+            s.setTip(black);
+            s.setQuarter(black);
             s.setSwoosh("#0734bb");
-            s.setLace("#0734bb");
-            s.setTongue("#0734bb");
-            s.setTongueRim("#0734bb");
+            s.setLace(black);
+            s.setTongue(black);
+            s.setTongueRim(black);
             s.setTongueTag("#0734bb");
             s.setOutsole("#0734bb");
         %>
