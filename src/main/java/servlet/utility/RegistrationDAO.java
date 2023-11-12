@@ -1174,6 +1174,61 @@ public class RegistrationDAO implements Serializable {
             e.printStackTrace();
         }
     }
+
+    public List<Article> getTop5(int index) {
+        Connection con = null;
+        PreparedStatement prst = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtils.MakeConnection();
+            if (con != null) {
+                String sql = "select * from Articles order by Release_Date desc offset ? Rows Fetch First 5 rows only";
+                prst = con.prepareStatement(sql);
+                prst.setInt(1, (index - 1) * 5);
+                rs = prst.executeQuery();
+                List<Article> list = new ArrayList<>();
+                while (rs.next()) {
+                    Article ar = new Article(rs.getString(1),
+                            rs.getString(2),
+                            rs.getString(3),
+                            rs.getString(4),
+                            rs.getString(5),
+                            rs.getString(6));
+                    list.add(ar);
+                }
+                return list;
+            }
+
+        } catch (SQLException e) {
+        }
+        return null;
+    }
+    
+    public int getNumberPage() {
+        Connection con = null;
+        PreparedStatement prst = null;
+        ResultSet rs = null;
+        try {
+            con = DBUtils.MakeConnection();
+            if (con != null) {
+                String sql = "select count(*) from Articles";
+                prst = con.prepareStatement(sql);
+                rs = prst.executeQuery();
+                while (rs.next()) {
+                    int total = rs.getInt(1);
+                    int countPage = 0;
+                    countPage = total / 5;
+                    if(total % 5 != 0){
+                        countPage ++;
+                    }
+                    return countPage;
+                }
+            }
+
+        } catch (SQLException e) {
+        }
+        return 0;
+    }
     
     List<RegistrationDTO> listAccount;
     public List<RegistrationDTO> getListAcount(){
