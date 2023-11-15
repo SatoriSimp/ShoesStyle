@@ -226,6 +226,44 @@ thead {
 }
 
 tr {
+    min-width: fit-content;
+}
+
+td {
+    white-space: nowrap;
+    min-width: fit-content;
+    text-align: center;
+}
+
+td > button {
+    display: inline;
+    background-color: #0099ff;
+    border: none;
+    color: white;
+    text-decoration: none;
+    width: 110px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6% 8%;
+}
+
+td > button:hover {
+    background-color: #0066cc;
+}
+
+.cancel {
+    background-color: #ff3333 !important;
+}
+
+.cancel:hover {
+    background-color: #cc0033 !important;
+}
+
+td i {
+    margin-right: 5%;
+}
+
+tr {
     width: fit-content;
     padding: 2%;
 }
@@ -242,8 +280,12 @@ td {
     text-align: center;
     justify-content: center;
     padding: 2.5% 3%;
+    min-width: fit-content;
 }
 
+button:disabled {
+    cursor: default;
+}
 
 /* ===================================== footer ======================================= */
 
@@ -295,3 +337,90 @@ footer button:hover {
    
 }
 
+.overlay {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(240,240,240,0.35);
+    z-index: 9999;
+    box-shadow: 5px 10px;
+}
+
+.overlay-button {
+    margin-left: -5%;
+    margin-right: 45%;
+    margin-top: 12%;
+    margin-bottom: -25%;
+    color: white;
+    border-radius: 5px;
+    padding: 2% 4%;
+    background-color: blue;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.overlay > div {
+    background: white;
+    padding: 2% 10% 8% 10%;
+    box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px 10px;
+    height: 70%;
+    display: block;
+    text-align: left;
+    position: absolute;
+    border: none;
+    min-width: fit-content;
+    margin: 5.5%;
+}
+
+.overlay h1 {
+    font-family: Tahoma;
+    font-size: 34px;
+    font-weight: 500;
+    color: #0099ff;
+    text-align: center;
+}
+
+.imgUpload {
+    background: #0066ff !important;
+    color: white !important;
+    border: none !important;
+    
+}
+
+.btns {
+    margin-top: 8%;
+    margin-bottom: -20%;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+.btns button {
+    padding: 2% 4%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btns a {
+    padding: 2% 4%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+    font-family: Arial;
+}

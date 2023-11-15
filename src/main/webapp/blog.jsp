@@ -1,4 +1,5 @@
 
+<%@page import="servlet.utility.RegistrationDAO"%>
 <%@page import="servlet.registration.objects.Cart"%>
 <%@page import="servlet.registration.objects.Account"%>
 <%@page import="servlet.registration.objects.Article"%>
@@ -6,7 +7,6 @@
 <%@page import="java.util.ArrayList" %>
 <%@page contentType="text/html; charset=UTF-8" %>
 <html lang="en">
-
     <head>
         <jsp:useBean id="ar" class="servlet.utility.RegistrationDAO" scope="request"/>
         <meta charset="UTF-8">
@@ -32,6 +32,16 @@
 
     <body>
         <%
+            String index = request.getParameter("index");
+            if (index == null){
+                index = "1";
+            }
+            int articlePage = Integer.parseInt(index);
+            RegistrationDAO dao = new RegistrationDAO();
+            List<Article> list = dao.getAll(articlePage);
+            request.setAttribute("ListAr", list);
+            request.setAttribute("indexPage", articlePage);
+
             Account acc = (Account) session.getAttribute("UserAccount");
             Cart cart = acc == null ? null : acc.getUserCart();
             
@@ -39,7 +49,7 @@
 
             <nav class="navbar">
                 <!-- Logo -->
-                <img onclick="window.open('home.jsp'); cursor: pointer;" src="./img/Logo.svg" alt="HAPS|SNEAKERS." />
+                <img onclick="window.open('home.jsp', '_self'); cursor: pointer;" src="./img/Logo.svg" alt="HAPS|SNEAKERS." />
 
                 <!-- Navigation -->
                 <ul>
@@ -86,16 +96,23 @@
                 List<Article> listAr = (List<Article>) request.getAttribute("ListAr");
                 Integer indexPage = (Integer) request.getAttribute("indexPage");
 
-
                 if (listAr == null) {
                     listAr = new ArrayList<>(); 
                 }
                 if (indexPage == null) {
                     indexPage = 1;
                 }
+                
+                int start = 1 + (indexPage - 1) * 5;
+                int end = start + 5;
+                List<Article> listDisplay = new ArrayList<>();
+                for (int i = start; i < end; ++i) {
+                    if (i > listAr.size()) break;
+                    listDisplay.add(listAr.get(i - 1));
+                }
             %>
             <div class="posts">
-                <% for (Article article : listAr) { %>
+                <% for (Article article : listDisplay) { %>
                 <div class="card">
                     <div class="postimg">
                         <a href="<%= article.getLink() %>">
@@ -109,18 +126,15 @@
                         <h5 class="date"><%= article.getReleaseDate() %></h5>
                         <p class="description"><%= article.getDiscrip() %></p>
                     </div>
-                    <button></button>
+                    <button onclick="window.open('<%= article.getLink() %>')"></button>
                 </div>
                 <% } %>
 
-                <button id="surprise" onclick="location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs'">
-                    Click for surprise !
-                </button>
-                <nav aria-label="...">
+                <nav aria-label="..." class="blogNav">
                     <ul class="pagination pagination-lg">
                         <% for (int i = 1; i <= ar.getNumberPage(); i++) { %>
-                        <li class="page-item" <%= indexPage == i ? "active" : "" %>>
-                            <a class="page-link" href="blog?index=<%= i %>"><%= i %></a>
+                        <li class="page-item">
+                            <a class="page-link" <% if (indexPage == i) { %> style="background:#0033cc" <% }%> href="blog.jsp?index=<%= i %>"><%= i %></a>
                         </li>
                         <% } %>
                     </ul>

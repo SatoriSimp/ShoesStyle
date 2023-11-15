@@ -27,7 +27,8 @@
         />
         <!-- <link rel="stylesheet" href="./assets/fonts/stylesheet.css" /> -->
         <link rel="stylesheet" href="decors/payment.css" />
-        <title>Shoes Stylize</title>
+        <title>Payment guide</title>
+    </head>
     <body>
         <nav class="navbar">
             <!-- Logo -->
@@ -95,11 +96,9 @@
                             <p>- Your order will be charged additional shipping fee of 70,000 VND</p>
                         </div>
                         <div class="moc-2">
-                            <p>- Payment in cash when your order is delivered</p>
-                            <p>- Digital payment (either pay after receiving order or in advance)</p>
+                            <p>- Digital payment in advance</p>
                             <p>- Your shipping fee is free of charge!</p>
                         </div>
-                    
                     </div>
                 </div>
                 <div class="title-2">
@@ -108,11 +107,13 @@
                 <div class="content">
                     <h4>1. Digital bank transfer.</h4>
                     <p>Transfer your order's total to the bank account below.</p>
-                    <p>After you have done, please make sure to send us a SMS message or email with the following format: "Dear HAPS Sneakers, I have paid [Your order's total] for the order with ID [Your order's ID]" so we can confirm your order as soon as possible!</p>
-                </div>
-                <div class="content-2">
-                    <h4>2.Thanh toán qua ngân hàng</h4>
-                    <p>Quý Khách hãy vào tr?c ti?p chi nhánh/phòng giao d?ch m?t trong các ngân hàng sau ?ây ?? g?i ti?n (không c?n ph?i có tài kho?n ? ngân hàng).</p>
+                    <p>After you have done, please make sure to send us a SMS message or email with the following format:
+                        <span style="font-weight: bold; font-style: italic; margin: 2%; display:block">
+                            Dear HAPS Sneakers, I have paid [Your order's total] for the order with ID [Your order's ID]
+                        </span>
+                         so we can check and confirm your order as soon as possible!
+                    </p>
+                    <br>
                 </div>
 
                 <div class="table-bank">

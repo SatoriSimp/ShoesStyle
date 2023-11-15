@@ -1954,8 +1954,8 @@
                     <p>Payment method</p>
                 </div>
                 <div class="method-payment-content">
-                    <input class="choose-payment" type="radio" name="paymentMethod" value="Payment in cash" required <h5>Payment in cash.</h5> 
-                    <p>Pay directly with cash after your order is arrived (COD).</p>
+                    <input class="choose-payment" type="radio" name="paymentMethod" value="Payment in cash" required <% if (cart.getTotalPrice() > 3_000_000) { %> style="color: lightgray" disabled <% } %> <h5>Payment in cash.</h5> 
+                    <p>Pay directly with cash after your order is arrived (COD), this method can not be applied if your order total is greater than 3,000,000 VND.</p>
                     <input class="choose-payment" type="radio" name="paymentMethod" value="Digital payment" required <h5>Digital payment.</h5>
                     <p>Pay for the order in advance, convenient and easier for delivery.</p>
                </div>

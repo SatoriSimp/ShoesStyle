@@ -23,6 +23,7 @@ function changeShoe() {
             }
             document.getElementById("jordan1").setAttribute("display", "view");
             document.getElementById("jordan1Menu").style.display = "block";
+            document.getElementById("shoesPrice").innerHTML = "1,700,000";
             break;
         case "airforce1":
             if(document.getElementById("jordan1").getAttribute("display") == "view"){
@@ -44,6 +45,7 @@ function changeShoe() {
             
             document.getElementById("airforce1").setAttribute("display", "view");
             document.getElementById("AF1Menu").style.display = "block";
+            document.getElementById("shoesPrice").innerHTML = "2,100,000";
             break;
         case "converse":
             if(document.getElementById("airforce1").getAttribute("display") == "view"){
@@ -68,6 +70,7 @@ function changeShoe() {
             
             document.getElementById("converse").setAttribute("display", "view");
             document.getElementById("converseMenu").style.display = "block";
+            document.getElementById("shoesPrice").innerHTML = "1,050,000";
             break;
         case "vans":
             if(document.getElementById("airforce1").getAttribute("display") == "view"){
@@ -94,6 +97,7 @@ function changeShoe() {
             
             document.getElementById("vans").setAttribute("display", "view");
             document.getElementById("vansMenu").style.display = "block";
+            document.getElementById("shoesPrice").innerHTML = "1,200,000";
             break;
             
         case "blazermid":
@@ -119,6 +123,7 @@ function changeShoe() {
             
             document.getElementById("blazermid").setAttribute("display", "view");
             document.getElementById("blazerMidMenu").style.display = "block";
+            document.getElementById("shoesPrice").innerHTML = "2,350,000";
             break;
         default:
             break;

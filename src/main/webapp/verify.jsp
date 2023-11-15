@@ -5,69 +5,82 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/8a92f73d4a.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <!-- cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
         <title>Verify Account</title>
         <link rel="stylesheet" href="decors/verifyAccount.css">
     </head>
     <body>
         <% 
             if (request.getAttribute("RegistSuccess") != null) {
-            %>
+        %>
     <style>
         .overlay {
+            overflow: hidden;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255,255,255,0.35);
-            display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto;
+            height: 100vh;
+            background-color: rgba(240,240,240,0.35);
             z-index: 9999;
             box-shadow: 5px 10px;
         }
+
         .overlay-button {
-            margin-top: 12%;
+            margin: 10% auto 0 28.5%;
             color: white;
-            border-radius: 10px;
-            padding: 2% 4%;
+            border-radius: 5px;
+            padding: 6% 10%;
             background-color: blue;
             border: none;
-            font-size: 22px;
+            font-size: 20px;
             cursor: pointer;
-            align-items: center;
-            justify-self: center;
-            margin-left: 37.5%;
-        }
-        .overlay > div {
-            background: #f2f2f2;
-            padding: 0 5% 3% 5%;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            border: none;
         }
 
-        h1 {
+        .overlay > div {
+            background: white;
+            padding: 2% 5% 8% 5%;
+            box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 10px 10px;
+            height: 30%;
+            display: block;
+            text-align: left;
+            position: absolute;
+            border: none;
+            min-width: fit-content;
+            margin: 12% 30%;
+        }
+
+        .overlay h1 {
             font-family: Tahoma;
-            font-size: 42px;
+            font-size: 34px;
             font-weight: 500;
             color: #0099ff;
             text-align: center;
         }
-
-        button:hover {
-            background-color: #008cff;
-        }
     </style>
-    <div class="overlay">
-        <div>
-            <h1>Account created successfully!<br>Please log in!</h1>
-            <button class="overlay-button" onclick="window.open('login.jsp', '_self')">Let's gooo</button>
+        <div class="overlay">
+            <div>
+                <h1>
+                    <i class="fa-solid fa-circle-check fa-2xl" style="color: #255ec1;margin-bottom: 10%;"></i>
+                    
+                    <br>Account created successfully!<br>Please log in!
+                </h1>
+                <button class="overlay-button" onclick="window.open('login.jsp', '_self')">Let's gooo</button>
+            </div>
         </div>
-    </div>
             <%  
             }
         %>
@@ -101,7 +114,6 @@
                     }
                     %>
                 </div>
-
 
                 <div class="send">
                     <button type="submit" name="btnSubmit" value="Verify">Confirm</button>

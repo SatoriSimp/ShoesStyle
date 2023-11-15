@@ -26,7 +26,7 @@
     />
     <link rel="stylesheet" href="decors/home.css" />
     <link rel="stylesheet" href="decors/galleryStyle.css" />
-    <title>Shoes Stylize</title>
+    <title>Design gallery</title>
 
 <body>
     <% 

@@ -44,6 +44,14 @@
         <servlet-name>ChangePassword</servlet-name>
         <servlet-class>servlet.controllers.ChangePassword</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FeedBackHandler</servlet-name>
+        <servlet-class>servlet.controllers.FeedBackHandler</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>OrderCanceller</servlet-name>
+        <servlet-class>servlet.controllers.OrderCanceller</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/ctlLogin</url-pattern>
@@ -83,6 +91,14 @@
     <servlet-mapping>
         <servlet-name>ChangePassword</servlet-name>
         <url-pattern>/ctlChangePassword</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FeedBackHandler</servlet-name>
+        <url-pattern>/ctlFeedback</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderCanceller</servlet-name>
+        <url-pattern>/ctlOrderCancel</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

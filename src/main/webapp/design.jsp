@@ -4438,26 +4438,53 @@
                 
                 <div style="margin-top: 3%">
                     <% if (acc == null || acc.getStrUsername().isEmpty() || acc.getStrUsername().isBlank()) { %>
-                    <button type="reset" onclick="LoginPrompt();">
+                    <button type="reset" onclick="document.getElementById('overlay').style.display='block'">
                         <i class="fa fa-shopping-cart"></i>
                         Add to cart
                     </button>
 
-                    <script>
-                        function LoginPrompt() {
-                            alert("You need to log in to perform this action!");
-                            window = window.open('login.jsp', '_self');
-                        };
-                    </script>
+                    <div class="overlay" id="overlay" style="display:none;">
+                        <div style="height: 30%; margin: 12% 10% 10% 28%; width: 25%; padding: 2%">
+                            <h1>
+                                You need to log in to perform this action!</h1>
+                            <div class="btns">
+                                <button type="button" class="overlay-button" 
+                                style="background: #00c962; height: 50px; padding: 0 4%; margin-left: 10%" onclick="document.getElementById('overlay').style.display = 'none'">
+                                    Close</button>
+                                <button type="button" class="overlay-button" onclick="window.open('login.jsp', '_self')"
+                                        style="margin-left: 0%; height: 50px; padding: 0 4%; ">Login now</button>
+                            </div>
+                        </div>
+                    </div>
                     <% } else { %>
                     <button type="submit" name="btnSubmit" value="Design">
                         <i class="fa fa-shopping-cart"></i>
                         Add to cart
                     </button>
                     <% } %>
+                    <p style="text-align: center; margin-bottom: 1%; font-family: Tahoma; font-weight: bold; font-size: 24px;">
+                        Price/pair (VND): <label type="password" id="shoesPrice" style="color: #00cc33">1,700,000</label>
+                    </p>
+                    <p style="text-align: center; color:#999999; font-style: italic; font-family: Tahoma; font-weight: normal; font-size: 18px;">
+                         *Note: You can modify the quantity later
+                     </p>
                 </div>
             </form>
-
+        <% 
+            if (request.getAttribute("AddItemSuccess") != null) {
+        %>
+            <div class="overlay" id="overlay">
+                <div>
+                    <h1><i class="fa-solid fa-circle-check fa-sm" style="color: #0008ff;"></i> Added to cart!</h1>
+                    <div class="btns">
+                        <button class="overlay-button" style="background: #00c962; margin-left: -20%; maring-right: 20%" onclick="document.getElementById('overlay').style.display = 'none'">Continue to design</button>
+                    <button class="overlay-button" onclick="window.open('cart.jsp', '_self')">View cart</button>
+                    </div>
+                </div>
+            </div>
+        <%  
+            }
+        %>
             <h1 style="text-align: center; font-family: tahoma; font-size: 48px; color: #0066ff; -webkit-text-stroke-width: 1.5px;
             -webkit-text-stroke-color: black; background-color: rgb(198, 242, 255);padding: 1%;">Size Guide</h1>
             <div id="sizeGuideHolder">

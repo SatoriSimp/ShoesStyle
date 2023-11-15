@@ -161,6 +161,28 @@ h1 {
     color: #003294;
 }
 
+nav .blogNav {
+    display: inline;
+    margin: 25% 25%;
+}
+
+.blogNav ul {
+    display: flex;
+    justify-content:space-around;
+    list-style-type:none;
+    margin: 25% 25%;
+}
+
+.page-link {
+    padding: 16px 22px 16px 22px;
+    font-size: 20px;
+    color: white;
+    border: black solid 2px;
+    background: #0099ff;
+    text-decoration: none; 
+    margin: 20px 20px;
+}
+
 footer {
     background-color: #c9c9c9;
     border-top: black solid 5px;

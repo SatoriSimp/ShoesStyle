@@ -89,16 +89,17 @@
 
         <div class="info">
             <div class="info-address">
-                <h2>FPT Shoes Fashion</h2>
+                <h2>HAPS Sneakers</h2>
             </div>
             <div class="info-address-detail">
-                <h3>Thông tin liên hệ</h3>
-                <p>Địa chỉ: tòa nhà Sky 9, 30 đường số 1, khu phố 2, phường Phú Hữu, Tp.Thủ Đức</p>
-                <p>ĐT: 0332079769</p>
+                <h3>Contact information</h3>
+                <p>Address: Sky 9 Building, 30 - No.1 Street, 2nd quarter, Phu Huu Ward, Thu Duc city</p>
+                <p>Phone: 0332079769</p>
                 <p>Email: hapssneakers@gmail.com</p>
                 <p>Chat Facebook: HAPS Sneakers Store</p>
-                <h3>Giờ làm việc</h3>
-                <p>09h-18h Thứ 2 - Thứ 7</p>
+                <h3>Business hours</h3>
+                <p>24/7 (online website)</p>
+                <p>09h-19h from Monday to Saturday every week (factory)</p>
             </div>
         </div>
         
