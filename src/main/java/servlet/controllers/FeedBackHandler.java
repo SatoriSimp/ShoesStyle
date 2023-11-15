@@ -5,19 +5,20 @@
 package servlet.controllers;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import servlet.registration.objects.Account;
+import servlet.utility.RegistrationDAO;
 
 /**
  *
  * @author Dell
  */
-@WebServlet(name = "ErrorController", urlPatterns = {"/ctlError"})
-public class ErrorController extends HttpServlet {
+public class FeedBackHandler extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,9 +31,18 @@ public class ErrorController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String url = "error.jsp";
-        RequestDispatcher rq = request.getRequestDispatcher(url);
-        rq.forward(request, response);
+        String orderID = request.getParameter("OrderID");
+        String rating = request.getParameter("slc" + orderID);
+        String des = request.getParameter("txt" + orderID);
+        RegistrationDAO dao = new RegistrationDAO();
+        RequestDispatcher rd = request.getRequestDispatcher("myCart.jsp");
+        if (dao.insertFeedback(orderID, ((Account) request.getSession().getAttribute("UserAccount")).getStrUsername() , rating, des)) {
+            request.setAttribute("Notif", "Success");
+        }
+        else {
+            request.setAttribute("Notif", "Error");
+        }
+        rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -73,5 +83,4 @@ public class ErrorController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 }

@@ -174,8 +174,8 @@ public class AddToCart extends HttpServlet {
                     break;
             }
 
-            
-            RequestDispatcher rq = request.getRequestDispatcher("cart.jsp");
+            request.setAttribute("AddItemSuccess", new Object());
+            RequestDispatcher rq = request.getRequestDispatcher("design.jsp");
             rq.forward(request, response);
         } catch (SQLException ex) {
             Logger.getLogger(AddToCart.class.getName()).log(Level.SEVERE, null, ex);

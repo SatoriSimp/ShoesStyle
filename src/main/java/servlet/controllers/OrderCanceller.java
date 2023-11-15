@@ -5,19 +5,22 @@
 package servlet.controllers;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import servlet.registration.objects.Account;
+import servlet.registration.objects.Order;
+import servlet.utility.RegistrationDAO;
 
 /**
  *
  * @author Dell
  */
-@WebServlet(name = "ErrorController", urlPatterns = {"/ctlError"})
-public class ErrorController extends HttpServlet {
+public class OrderCanceller extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,9 +33,19 @@ public class ErrorController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String url = "error.jsp";
-        RequestDispatcher rq = request.getRequestDispatcher(url);
-        rq.forward(request, response);
+        String ID = request.getParameter("OrderID");
+        Account acc = (Account) request.getSession().getAttribute("UserAccount");
+        RegistrationDAO dao = new RegistrationDAO();
+        RequestDispatcher rd = request.getRequestDispatcher("myCart.jsp");
+        if (dao.cancelOrder(ID)) {
+            request.setAttribute("Cancel", "Success");
+            acc.setUserOrders(new ArrayList<Order>());
+            dao.loadUserOrders(acc);
+        }
+        else {
+            request.setAttribute("Cancel", "Error");
+        }
+        rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

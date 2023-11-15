@@ -43,8 +43,9 @@ public class OrderStatusUpdate extends HttpServlet {
 
         RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
         if (dao.updateOrderStatus(orderID, orderStatus)) {
+            request.setAttribute("UpdateSuccess", new Object());
             String newStatus = dao.getOrderStatus(orderID);
-            if (oldStatus.equals(newStatus)) {
+            if (oldStatus.equalsIgnoreCase(newStatus)) {
                 rd.forward(request, response);
                 return;
             }
@@ -65,7 +66,7 @@ public class OrderStatusUpdate extends HttpServlet {
                     remainingSteps = 
                             "Tadaa! Your shoes are finally here, and they will be right at your place in about 1-2 days. "
                             + "So please keep an eye on your phone to make sure you won't miss out any call from our delivery man.\n"
-                            + "After you have received your oder, please check it out and immediately contact us within 48 hours if something goes off the track! "
+                            + "After you have received your shoes, please check it out and immediately contact us within 48 hours if something goes off the track! "
                             + "If not, hope you enjoy your shoes then!";
                     break;
             }

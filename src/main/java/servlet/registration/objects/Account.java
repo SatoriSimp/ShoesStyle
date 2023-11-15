@@ -14,7 +14,7 @@ public class Account {
     private String strUsername, strPassword;
     private String strPhonenumber, strAddress;
     private String role;
-    private final ArrayList<Order> UserOrders = new ArrayList<>();
+    private ArrayList<Order> UserOrders = new ArrayList<>();
     private Cart UserCart;
 
     public Account(String strUsername, String strPassword, String strPhone, String strAddress, String role) {
@@ -54,6 +54,10 @@ public class Account {
     public Cart getUserCart() {
         return UserCart;
     }
+
+    public void setUserOrders(ArrayList<Order> UserOrders) {
+        this.UserOrders = UserOrders;
+    }
     
     public void setUserCart(Cart UserCart) {
         this.UserCart = UserCart;
@@ -66,7 +70,8 @@ public class Account {
     public ArrayList<Order> getUserOrders() {
         return UserOrders;
     }
-
+    
+    
     public String getStrPhonenumber() {
         return strPhonenumber;
     }

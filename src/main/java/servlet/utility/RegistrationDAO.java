@@ -18,6 +18,7 @@ import javax.naming.NamingException;
 import servlet.controllers.DBUtils;
 import servlet.registration.objects.Account;
 import servlet.registration.objects.AirForce1;
+import servlet.registration.objects.Article;
 import servlet.registration.objects.BlazeMid;
 import servlet.registration.objects.Cart;
 import servlet.registration.objects.Converse;
@@ -70,6 +71,144 @@ public class RegistrationDAO implements Serializable {
             }
         }
         return null;        
+    }
+    
+    public Cart getShoesList() {
+        Connection con = null;
+        PreparedStatement prst = null;
+        try {
+            con = DBUtils.MakeConnection();
+            if (con != null) {
+                
+                String getItemsSQL = "SELECT * FROM Item\n" +
+                                    "JOIN Order_Item oi ON oi.Item_ID = Item.Item_ID\n" +
+                                    "JOIN Delivery d ON d.Order_ID = oi.Order_ID";
+                prst = con.prepareStatement(getItemsSQL);
+                ResultSet rs = prst.executeQuery();
+                Cart cart = new Cart();
+                while (rs.next()) {
+                    switch (rs.getString("Type")) {
+                        case "jordan1":
+                            Jordan1 j = new Jordan1();
+                            j.setID(rs.getString("Item_ID"));
+                            j.setName(rs.getString("Item_Name"));
+                            j.setCollar(rs.getString("Collar"));
+                            j.setEyestay(rs.getString("Eyestay"));
+                            j.setHeel(rs.getString("Heel"));
+                            j.setLace(rs.getString("Lace"));
+                            j.setLowerEyestay(rs.getString("LowerEyestay"));
+                            j.setMaterial(rs.getString("Material"));
+                            j.setMidsole(rs.getString("Midsole"));
+                            j.setModel(rs.getString("Type"));
+                            j.setOutsole(rs.getString("Outsole"));
+                            j.setQuarter(rs.getString("Quarter"));
+                            j.setSize(rs.getString("Size"));
+                            j.setSocklining(rs.getString("Socklining"));
+                            j.setSwoosh(rs.getString("Swoosh"));
+                            j.setTip(rs.getString("Tip"));
+                            j.setToeBox(rs.getString("ToeBox"));
+                            j.setTongue(rs.getString("Tongue"));
+                            j.setTongueRim(rs.getString("TongueRim"));
+                            j.setTongueTag(rs.getString("TongueTag"));
+                            cart.addItem(j, rs.getInt("Quantity"));
+                            break;
+                        case "airforce1":
+                            AirForce1 a = new AirForce1();
+                            a.setBack(rs.getString("Back"));
+                            a.setEyestay(rs.getString("Eyestay"));
+                            a.setHeel(rs.getString("Heel"));
+                            a.setID(rs.getString("Item_ID"));
+                            a.setLace(rs.getString("Lace"));
+                            a.setMaterial(rs.getString("Material"));
+                            a.setModel("airforce1");
+                            a.setOutsole(rs.getString("Outsole"));
+                            a.setQuarter(rs.getString("Quarter"));
+                            a.setSize(rs.getString("Size"));
+                            a.setSocklining(rs.getString("Socklining"));
+                            a.setSwoosh(rs.getString("Swoosh"));
+                            a.setText(rs.getString("Text"));
+                            a.setTip(rs.getString("Tip"));
+                            a.setToeBox(rs.getString("ToeBox"));
+                            a.setTongue(rs.getString("Tongue"));
+                            a.setTongueRim(rs.getString("TongueRim"));
+                            a.setTongueTag(rs.getString("TongueTag"));
+                            cart.addItem(a, rs.getInt("Quantity"));
+                            break;
+                        case "converse":
+                            Converse c = new Converse();
+                            c.setBody(rs.getString("Body"));
+                            c.setEyeholes(rs.getString("Eyeholes"));
+                            c.setHeelPatch(rs.getString("HeelPatch"));
+                            c.setID(rs.getString("Item_ID"));
+                            c.setLace(rs.getString("Lace"));
+                            c.setLogo(rs.getString("Logo"));
+                            c.setMaterial(rs.getString("Material"));
+                            c.setMidsole(rs.getString("Midsole"));
+                            c.setMidsoleLine(rs.getString("MidsoleLine"));
+                            c.setModel("converse");
+                            c.setName(rs.getString("Item_Name"));
+                            c.setSize(rs.getString("Size"));
+                            c.setStarAndText(rs.getString("StarNText"));
+                            c.setToeCap(rs.getString("ToeCap"));
+                            c.setTongue(rs.getString("Tongue"));
+                            cart.addItem(c, rs.getInt("Quantity"));
+                            break;
+                        case "vans":
+                            Vans v = new Vans();
+                            v.setEmblem(rs.getString("Emblem"));
+                            v.setEyestay(rs.getString("Eyestay"));
+                            v.setFoxing(rs.getString("Foxing"));
+                            v.setFoxingLine(rs.getString("FoxingLine"));
+                            v.setHeel(rs.getString("Heel"));
+                            v.setHeelLabel(rs.getString("HeelLabel"));
+                            v.setID(rs.getString("Item_ID"));
+                            v.setInnerLining(rs.getString("InnerLining"));
+                            v.setLace(rs.getString("Lace"));
+                            v.setMaterial(rs.getString("Material"));
+                            v.setModel("vans");
+                            v.setQuarter(rs.getString("Quarter"));
+                            v.setSize(rs.getString("Size"));
+                            v.setTongue(rs.getString("Tongue"));
+                            v.setVamp(rs.getString("Vamp"));
+                            cart.addItem(v, rs.getInt("Quantity"));
+                            break;
+                        case "blazermid":
+                            BlazeMid b = new BlazeMid();
+                            b.setBody(rs.getString("Body"));
+                            b.setEyestay(rs.getString("Eyestay"));
+                            b.setHeel(rs.getString("Heel"));
+                            b.setID(rs.getString("Item_ID"));
+                            b.setLace(rs.getString("Lace"));
+                            b.setMaterial(rs.getString("Material"));
+                            b.setMidsole(rs.getString("Midsole"));
+                            b.setModel("blazermid");
+                            b.setSize(rs.getString("Size"));
+                            b.setSocklining(rs.getString("Socklining"));
+                            b.setSuade(rs.getString("Suade"));
+                            b.setSwoosh(rs.getString("Swoosh"));
+                            b.setToeBox(rs.getString("ToeBox"));
+                            b.setTongue(rs.getString("Tongue"));
+                            b.setTongueRim(rs.getString("TongueRim"));
+                            b.setTongueTag(rs.getString("TongueTag"));
+                            cart.addItem(b, rs.getInt("Quantity"));
+                            break;
+                    }
+                }
+                return cart;
+            }
+        }
+        catch (SQLException s) {
+            s.printStackTrace();
+        }
+        finally {
+            try {
+                if (prst != null) prst.close();
+                if (con != null) con.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(RegistrationDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return null;
     }
     
     public ArrayList<Order> getOrderList() {
@@ -163,6 +302,112 @@ public class RegistrationDAO implements Serializable {
             if (con != null) con.close();
         }
         return null;
+    }
+    
+    public boolean insertFeedback(String order, String email, String rate, String des) {
+        Connection con = null;
+        PreparedStatement prst = null;
+        try {
+            con = DBUtils.MakeConnection();
+            if (con != null) {
+                String sql = "INSERT INTO Feedback(Order_ID, Email, Rating, Description) "
+                        + "VALUES(?, ?, ?, ?)";
+                prst = con.prepareStatement(sql);
+                prst.setString(1, order);
+                prst.setString(2, email);
+                prst.setString(3, rate);
+                prst.setString(4, des);
+                int rs = prst.executeUpdate();
+                if (rs > 0) {
+                    return true;
+                }
+            }
+            else {
+                System.out.println("Cannot connect");
+            }
+        }
+        catch(SQLException s) {
+            s.printStackTrace();
+        }
+        finally {
+            try {
+                if (prst != null) prst.close();
+                if (con != null) con.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(RegistrationDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return false;
+    }
+    
+    public ArrayList<String> getFeedback(String order) {
+        Connection con = null;
+        PreparedStatement prst = null;
+        try {
+            con = DBUtils.MakeConnection();
+            if (con != null) {
+                String sql = "SELECT * FROM Feedback "
+                        + "WHERE Order_ID=?";
+                prst = con.prepareStatement(sql);
+                prst.setString(1, order);
+                ResultSet rs = prst.executeQuery();
+                final ArrayList<String> res = new ArrayList<>();
+                while (rs.next()) {
+                    res.add(rs.getString("Order_ID"));
+                    res.add(rs.getString("Rating"));
+                    res.add(rs.getString("Description"));
+                }
+                return res.isEmpty() ? null : res;
+            }
+            else {
+                System.out.println("Cannot connect");
+            }
+        }
+        catch(SQLException s) {
+            s.printStackTrace();
+        }
+        finally {
+            try {
+                if (prst != null) prst.close();
+                if (con != null) con.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(RegistrationDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return null;
+    }
+    
+    public boolean cancelOrder(String orderID) {
+        Connection con = null;
+        PreparedStatement prst = null;
+        try {
+            con = DBUtils.MakeConnection();
+            if (con != null) {
+                String sql = "UPDATE Delivery "
+                        + "SET Status='Cancelled' WHERE Order_ID=?";
+                prst = con.prepareStatement(sql);
+                prst.setString(1, orderID);
+                int rs = prst.executeUpdate();
+                if (rs > 0) {
+                    return true;
+                }
+            }
+            else {
+                System.out.println("Cannot connect");
+            }
+        }
+        catch(SQLException s) {
+            s.printStackTrace();
+        }
+        finally {
+            try {
+                if (prst != null) prst.close();
+                if (con != null) con.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(RegistrationDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return false;
     }
     
     public boolean changePass(String mail, String pass) throws SQLException {
@@ -434,7 +679,7 @@ public class RegistrationDAO implements Serializable {
         try {
             con = DBUtils.MakeConnection();
             if (con != null) {
-                String sql = "INSERT INTO Item (Item_ID, Item_Name, [Type], Size,"
+                String sql = "INSERT INTO Item (Item_Name, [Type], Size,"
                         + " Material, Emblem, Foxing, FoxingLine, Eyestay,"
                         + " HeelLabel, Heel, InnerLining, [Quarter], Vamp, Lace,"
                         + " Tongue, Price) "
@@ -954,7 +1199,6 @@ public class RegistrationDAO implements Serializable {
         }
     }
     
-    
     public void loadUserOrders(Account acc) {
         Connection con = null;
         PreparedStatement prst = null;
@@ -1174,17 +1418,16 @@ public class RegistrationDAO implements Serializable {
             e.printStackTrace();
         }
     }
-
-    public List<Article> getTop5(int index) {
+    
+    public List<Article> getAll(int index) {
         Connection con = null;
         PreparedStatement prst = null;
         ResultSet rs = null;
         try {
             con = DBUtils.MakeConnection();
             if (con != null) {
-                String sql = "select * from Articles order by Release_Date desc offset ? Rows Fetch First 5 rows only";
+                String sql = "select * from Articles order by Release_Date DESC";
                 prst = con.prepareStatement(sql);
-                prst.setInt(1, (index - 1) * 5);
                 rs = prst.executeQuery();
                 List<Article> list = new ArrayList<>();
                 while (rs.next()) {

@@ -9,17 +9,18 @@ import java.io.PrintWriter;
 import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.mail.MessagingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import servlet.registration.objects.Account;
 import servlet.registration.objects.Cart;
+import servlet.registration.objects.Order;
 import servlet.utility.EmailUtil;
 import servlet.utility.RegistrationDAO;
 
@@ -47,7 +48,6 @@ public class OrderRequestHandler extends HttpServlet {
         String city = request.getParameter("deliveryCity");
         String payment = request.getParameter("paymentMethod");
         String delivery = request.getParameter("deliveryMethod");
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");  
         LocalDateTime now = LocalDateTime.now();  
         Account account = (Account) request.getSession().getAttribute("UserAccount");
         Cart cart = account.getUserCart();
@@ -76,6 +76,7 @@ public class OrderRequestHandler extends HttpServlet {
                     + "Best regards.";
             
             account.setUserCart(new Cart());
+            account.setUserOrders(new ArrayList<Order>());
             dao.getCartID(account);
             dao.loadUserCart(account);
             dao.loadUserOrders(account);

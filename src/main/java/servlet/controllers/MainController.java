@@ -63,6 +63,12 @@ public class MainController extends HttpServlet {
             case "OrderStatus":
                 url = "ctlOrderStatus";
                 break;
+            case "Feedback":
+                url = "ctlFeedback";
+                break;
+            case "Cancel":
+                url = "ctlOrderCancel";
+                break;
             case "Logout":
                 request.getSession().setAttribute("UserAccount", null);
                 url = "home.jsp";
