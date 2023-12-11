@@ -633,7 +633,7 @@
             s.setName("Bred");
             s.setEyestay(black);
             s.setLowerEyestay(black);
-            s.setToeBox("ff0000");
+            s.setToeBox("#ff0000");
             s.setTip(black);
             s.setQuarter(black);
             s.setSwoosh("#ff0000");
@@ -1144,7 +1144,7 @@
             <h3><%= s.getName() %></h3>
             <h4>Model: <%= s.getModel() %></h4>
             <p class="price"><%= df.format(s.getPrice()) %> VND</p>
-            <p>Simple design with the use of hot color tone, makes you look supreme</p>
+            <p>Design with the use of hot color tone, some black parts makes it looks cooler.</p>
             <p><button onclick="window.open('design.jsp?preset=Bred', '_self')">Use this design</button></p>
         </div>
         <% 
@@ -1664,7 +1664,7 @@
             <h3><%= s.getName() %></h3>
             <h4>Model: <%= s.getModel() %></h4>
             <p class="price"><%= df.format(s.getPrice()) %> VND</p>
-            <p>Simple design with the use of hot color tone, makes you look supreme</p>
+            <p>Simple design with the use of cold tones, chill and stylish.</p>
             <p><button onclick="window.open('design.jsp?preset=Royal', '_self')">Use this design</button></p>
         </div>
         <% 
@@ -2037,7 +2037,7 @@
             <h3><%= a.getName() %></h3>
             <h4>Model: <%= a.getModel() %></h4>
             <p class="price"><%= df.format(a.getPrice()) %> VND</p>
-            <p>Simple design with the use of hot color tone, makes you look supreme</p>
+            <p>Resemble the wheat field of countryside, traditional and nostalgic.</p>
             <p><button onclick="window.open('design.jsp?preset=Wheat', '_self')">Use this design</button></p>            
         </div>        
         <% 
@@ -2335,7 +2335,7 @@
             <h3><%= c.getName() %></h3>
             <h4>Model: <%= c.getModel() %></h4>
             <p class="price"><%= df.format(c.getPrice()) %> VND</p>
-            <p>Simple design with the use of hot color tone, makes you look supreme</p>
+            <p>Original converse design with black as primary color, simple yet catchy.</p>
             <p><button onclick="window.open('design.jsp?preset=ConverseB', '_self')">Use this design</button></p>  
         </div>
         <% 
@@ -2623,7 +2623,7 @@
             <h3><%= c.getName() %></h3>
             <h4>Model: <%= c.getModel() %></h4>
             <p class="price"><%= df.format(c.getPrice()) %> VND</p>
-            <p>Simple design with the use of hot color tone, makes you look supreme</p>
+            <p>Original converse design with white as primary color, simple yet elegant.</p>
             <p><button onclick="window.open('design.jsp?preset=ConverseW', '_self')">Use this design</button></p>  
         </div>
     </div>

@@ -52,6 +52,10 @@
         <servlet-name>OrderCanceller</servlet-name>
         <servlet-class>servlet.controllers.OrderCanceller</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserDeleteController</servlet-name>
+        <servlet-class>servlet.controllers.UserDeleteController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/ctlLogin</url-pattern>
@@ -99,6 +103,10 @@
     <servlet-mapping>
         <servlet-name>OrderCanceller</servlet-name>
         <url-pattern>/ctlOrderCancel</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserDeleteController</servlet-name>
+        <url-pattern>/ctlDelete</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

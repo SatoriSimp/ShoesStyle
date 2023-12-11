@@ -106,7 +106,6 @@
                                 <p>
                                     View
                                     <select name="quality" id="quality" class="combobox">
-                                        <option value="10">10</option>
                                         <option value="25">25</option>
                                         <option value="50">50</option>
                                         <option value="100">100</option>
@@ -192,12 +191,7 @@
                                             name="txt<%=o.getStrCartID()%>" type="text" spellcheck="false" rows="15" cols="76">
                                         </textarea>
                                         <br>
-                                        <p>Include some images of the products if you want (up to 3):</p>
-                                        <input class="imgUpload" type="file" accept="image/*,.mp4" />
-                                        <br>
-                                        <input class="imgUpload" type="file" accept="image/*,.mp4" />
-                                        <br>
-                                        <input class="imgUpload" type="file" accept="image/*,.mp4" />
+                                        <p></p>
                                         <div class="btns">
                                             <button 
                                                 style="background:#ff3333" type="button" onclick="document.getElementById('<%= o.getStrCartID() %>').style.display = 'none'">
