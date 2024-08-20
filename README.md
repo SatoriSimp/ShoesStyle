@@ -16,7 +16,3 @@ The "Chicago" model displayed on the custom menu:
 
 Customer's cart:
 ![image](https://github.com/SatoriSimp/ShoesStyle/assets/76906613/092022c9-1149-4078-96d5-138ea72dfefd)
-
-
-# Database
-![Database](https://github.com/SatoriSimp/ShoesStyle/assets/76906613/345599c3-a764-47b6-af14-acca4252d2c0)
